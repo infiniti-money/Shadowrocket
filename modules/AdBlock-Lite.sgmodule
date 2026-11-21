@@ -1,0 +1,6 @@
+#!name=Shadowrocket Safe AdBlock Lite
+#!desc=Domain-only ad blocking; no scripts, no HTTPS decryption
+#!author=infiniti-money
+
+[Rule]
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/AdvertisingLite/AdvertisingLite.list,REJECT
