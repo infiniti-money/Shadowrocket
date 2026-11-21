@@ -1,5 +1,10 @@
 # Shadowrocket Safe Kit 🇻🇳
 
+## ✅ Khắc phục lỗi Ultimate — Recovery v3.4 (URL Extended không đổi)
+
+Sau khi người dùng báo không hoạt động, đã thay **bản 39 script cùng chạy** bằng cấu hình khôi phục: **3 Rule, 1 Header Rewrite, 3 Url Rewrite, 2 script Spotify, 4 hostname/pattern MITM**. Cả 39 script-path URL vẫn được giữ (2 bật, 37 chú thích); các URL đã báo 404 không còn bị chạy mặc định, đồng thời bỏ các can thiệp RevenueCat/iTunes khỏi bản này. Đây là bản thử nghiệm, **không bảo đảm Premium hoặc chặn mọi quảng cáo trong ứng dụng**. URL vẫn là [Infiniti-All-In-One-Extended.sgmodule](modules/Infiniti-All-In-One-Extended.sgmodule); [xem hướng dẫn Recovery v3.4](docs/ALL-IN-ONE-EXTENDED.md).
+
+
 ## ⚠️ ULTIMATE v3.3 — ĐÃ BẬT TOÀN BỘ 39 URL JS (RỦI RO CAO)
 
 [Infiniti-All-In-One-Extended.sgmodule](modules/Infiniti-All-In-One-Extended.sgmodule) tại **URL cũ** hiện chứa 5 Rule, 2 Header Rewrite, 5 URL Rewrite, 1 Map Local, **39 script-path JS đang bật (39 URL không trùng)** và 26 hostname/pattern MITM. **20 URL từng trả về 404**; các script có endpoint trùng có thể xung đột. Tất cả khai báo đã bật theo yêu cầu người dùng nhưng không bảo đảm tải được hoặc hoạt động trên iPhone. Không đưa CA private key hoặc mật khẩu lên GitHub. [Hướng dẫn và cảnh báo v3.3](docs/ALL-IN-ONE-EXTENDED.md).
