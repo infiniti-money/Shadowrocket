@@ -1,0 +1,39 @@
+#!name=Infiniti All In One - Premium Experimental
+#!desc=AdBlock + Privacy + optional Spotify/Locket/YouTube rewrites (HIGH RISK)
+#!author=infiniti-money; external scripts credited in comments
+#!homepage=https://github.com/infiniti-money/Shadowrocket
+#!url=https://raw.githubusercontent.com/infiniti-money/Shadowrocket/main/modules/opt-in/All-Apps-Experimental.sgmodule
+
+# EXPERIMENTAL: importing this module requires manual enablement in Shadowrocket.
+# WARNING: Includes HTTPS MITM for Spotify, YouTube, and SHARED RevenueCat API.
+# WARNING: RevenueCat rules may change data for OTHER apps, not just Locket.
+# WARNING: This does NOT grant a valid Apple/Spotify/Locket Premium subscription.
+# WARNING: External JS on moving branches is NOT fully audited. Test only if authorized.
+# Do NOT run alongside Spotify-Experimental, Locket-Experimental,
+# YouTube-Rewrite-Experimental, or Gaucuto/duyvinh09 10in1 files.
+# Turn off this module first if an app crashes, login fails or networking breaks.
+# Source: https://github.com/app2smile/rules
+# Source: https://github.com/HuuTriet/ios-scripts-collection
+# Source: https://github.com/dhungx/modules-shadowrocket
+# Rules: https://github.com/blackmatrix7/ios_rule_script
+
+[Rule]
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Privacy/Privacy.list,REJECT
+
+[Header Rewrite]
+http-request ^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/user-customization-service\/v1\/customize$ header-del if-none-match
+
+[Url Rewrite]
+^https?://(www|s)\.youtube\.com/api/stats/ads _ reject-200
+^https?://(www|s)\.youtube\.com/(pagead|ptracking) _ reject-200
+^https?://s\.youtube\.com/api/stats/qoe\?adcontext _ reject-200
+
+[Script]
+spotify-json = type=http-request,pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
+spotify-proto = type=http-response,pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
+Locket_Premium = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$),script-path=https://raw.githubusercontent.com/HuuTriet/ios-scripts-collection/main/Locket_Triet.js,requires-body=true,timeout=60
+Clean_Header = type=http-request,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers),script-path=https://raw.githubusercontent.com/HuuTriet/ios-scripts-collection/main/CleanHeader.js,timeout=60
+
+[MITM]
+hostname = %APPEND% %APPEND% spclient.wg.spotify.com, *spclient.spotify.com, %APPEND% api.revenuecat.com, %APPEND% www.youtube.com, s.youtube.com
