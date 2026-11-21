@@ -18,6 +18,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Verify safe modules and report experimental warnings
         run: python3 scripts/validate.py
+      - name: Inventory external script sources (no execution)
+        run: python3 scripts/check_script_sources.py
       - name: Check experimental combined module structure
         run: python3 scripts/check_experimental_structure.py
       - name: Report opt-in MITM risk (non-blocking inventory)
