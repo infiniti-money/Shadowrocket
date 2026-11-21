@@ -1,5 +1,10 @@
 # Shadowrocket Safe Kit 🇻🇳
 
+## ⚠️ ULTIMATE v3.3 — ĐÃ BẬT TOÀN BỘ 39 URL JS (RỦI RO CAO)
+
+[Infiniti-All-In-One-Extended.sgmodule](modules/Infiniti-All-In-One-Extended.sgmodule) tại **URL cũ** hiện chứa 5 Rule, 2 Header Rewrite, 5 URL Rewrite, 1 Map Local, **39 script-path JS đang bật (39 URL không trùng)** và 26 hostname/pattern MITM. **20 URL từng trả về 404**; các script có endpoint trùng có thể xung đột. Tất cả khai báo đã bật theo yêu cầu người dùng nhưng không bảo đảm tải được hoặc hoạt động trên iPhone. Không đưa CA private key hoặc mật khẩu lên GitHub. [Hướng dẫn và cảnh báo v3.3](docs/ALL-IN-ONE-EXTENDED.md).
+
+
 ## ✅ Bản tổng hợp duy nhất — Ultimate v3.2 (Experimental)
 
 Cập nhật **URL Extended cũ**: [Infiniti-All-In-One-Extended.sgmodule](modules/Infiniti-All-In-One-Extended.sgmodule). Gồm `[Rule]` (5), `[Header Rewrite]` (2), `[Url Rewrite]` (5), `[Map Local]` (1), `[Script]` (7 script đang bật), và `[MITM]` (21 hostname/pattern). Cả **39 đường dẫn JS** được giữ không trùng nhau: **7 bật, 32 chỉ chú thích** (gồm 20 nguồn từng 404). Tắt các module All-in-One chồng chéo khi dùng bản này. **CA riêng tư và mật khẩu không được đăng lên GitHub**; giải mã HTTPS phải được cấp quyền và tin cậy cục bộ trên iPhone. [Hướng dẫn bản duy nhất](docs/ALL-IN-ONE-EXTENDED.md).
