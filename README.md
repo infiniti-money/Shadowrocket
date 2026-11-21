@@ -135,3 +135,9 @@ Các bản thử nghiệm mới có file riêng trong [modules/opt-in](modules/o
 Đã tạo [All-Apps-Experimental.sgmodule](modules/opt-in/All-Apps-Experimental.sgmodule) để gom các quy tắc **Spotify, Locket và YouTube**, cộng với Advertising + Privacy. File này có MITM và JavaScript can thiệp phản hồi thuê bao; **không bật mặc định**, không xác nhận gói Premium hợp lệ và chưa kiểm thử trên iPhone.
 
 Không bật đồng thời bản tổng hợp với các module lẻ hay các gói 10in1 cũ. [Đọc hướng dẫn và cách quay lại cấu hình cũ](docs/ALL-APPS-EXPERIMENTAL.md). GitHub CI mặc định **không chứng nhận** an toàn của các script này. Bản chính `Infiniti-All-In-One.sgmodule` vẫn không MITM.
+
+## 🔍 Nghiên cứu giải mã HTTPS trên iOS
+
+Đã bổ sung [bảng nghiên cứu mitmproxy, HTTP Toolkit, Proxyman và tài liệu Shadowrocket](research/IOS-HTTPS-INSPECTION.md). Các phần mới gồm [mẫu HTTPS debug chỉ dành cho ứng dụng của chính bạn](modules/templates/HTTPS-Debug-Own-App.sgmodule.example) (tất cả dòng MITM đều bị comment, **không hoạt động**) và [trình kiểm toán tĩnh scope MITM](scripts/audit_mitm.py), được chạy trong GitHub Actions.
+
+**Không tự động bật giải mã HTTPS:** Các module Premium/opt-in hiện có vẫn ở trạng thái thử nghiệm, không được tự động nhập vào bản All-in-One an toàn. Chỉ dùng chứng chỉ CA và MITM với app/domain bạn có quyền kiểm tra; không giải mã lưu lượng tài khoản nhạy cảm hoặc chia sẻ khóa CA trong repository.
