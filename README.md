@@ -98,3 +98,14 @@ Bộ kiểm tra tĩnh **không chứng nhận module tương thích mọi phiên
 ## Tình trạng khôi phục tính năng Premium
 
 Xem [PREMIUM-RECOVERY-STATUS.md](research/PREMIUM-RECOVERY-STATUS.md) để biết những nguồn còn truy cập được, chức năng nào cần kiểm thử, và giới hạn xác minh quyền thuê bao. **Chưa có module mở khóa Premium nào được khôi phục hoặc kích hoạt.** Các module AdBlock Lite và Reviewed Safe vẫn không MITM.
+
+## Nguồn GitHub mới được tích hợp (21/11/2026)
+
+Các nguồn đã được rà soát và phân loại trong [UPSTREAM-SOURCE-MATRIX.md](research/UPSTREAM-SOURCE-MATRIX.md). Tôi không gộp các bộ lọc chồng chéo hoặc script Premium vào module mặc định.
+
+**Module tùy chọn:**
+- [Vietnam-Threat-Protection.sgmodule](modules/optional/Vietnam-Threat-Protection.sgmodule): tên miền nguy cơ từ `bigdargon/hostsVN`, không cần MITM. Có thể thử cùng bản All-in-One, nhưng có nguy cơ chặn nhầm.
+- [Privacy-Only.sgmodule](modules/optional/Privacy-Only.sgmodule): Privacy của `blackmatrix7` cho người chỉ cần quy tắc riêng. **Không bật chung với All-in-One**, vì đã bao gồm danh sách này.
+
+Các nguồn `ithtelab`, `GMOogway`, `poohyeban`, `hongkongkiwi` được nghiên cứu về kiến trúc, tính tương thích và chuyển đổi quy tắc, chưa đưa thành quy tắc bật mặc định. Không ghép trực tiếp định dạng `hosts` vào `RULE-SET`. Bộ kiểm tra tĩnh cũng không tương đương với thử nghiệm trên iPhone.
+
