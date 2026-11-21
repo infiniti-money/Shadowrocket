@@ -1,5 +1,14 @@
 # Shadowrocket Safe Kit 🇻🇳
 
+## HTTPS Experimental — bản có Script và Giải mã HTTPS (bật riêng)
+
+Nếu Shadowrocket hiển thị **Giải mã HTTPS: 0 / Kịch bản: 0** cho bản Extended Safe thì đó là đúng thiết kế (39 URL script chỉ là chú thích). Đã tạo bản thay thế **[Infiniti-Extended-HTTPS-Experimental.sgmodule](modules/opt-in/Infiniti-Extended-HTTPS-Experimental.sgmodule)** có **3 RULE-SET, 4 khai báo script, 1 mục MITM gồm 5 hostname/pattern**, cùng các mục rewrite YouTube/Spotify.
+
+**RAW:** `https://raw.githubusercontent.com/infiniti-money/Shadowrocket/main/modules/opt-in/Infiniti-Extended-HTTPS-Experimental.sgmodule`
+
+Bản mới **không tự bật trên iPhone**, không nhập cùng bản Extended Safe, không bảo đảm mở khóa Premium và có rủi ro giải mã HTTPS qua API RevenueCat dùng chung. [Hướng dẫn nhập, kiểm tra số lượng và quay về bản an toàn](docs/HTTPS-EXPERIMENTAL-SETUP.md).
+
+
 ## All-in-One Extended v2.0 — tích hợp sâu 39 nguồn JS
 
 **[Infiniti-All-In-One-Extended.sgmodule](modules/Infiniti-All-In-One-Extended.sgmodule)** là bản cài đặt hợp nhất **Advertising + Privacy + hostsVN threat protection**, kèm danh mục **39 script URL** theo từng nhóm ứng dụng (YouTube, Spotify, Locket/RevenueCat, Sub-Store, ứng dụng khác).
