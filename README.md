@@ -1,5 +1,12 @@
 # Shadowrocket Safe Kit 🇻🇳
 
+## ⚠️ Quan trọng: Extended đã cập nhật v2.1 (HTTPS Experimental)
+
+Theo yêu cầu, **URL cũ** `modules/Infiniti-All-In-One-Extended.sgmodule` hiện đã **bật 4 khai báo script và MITM/Rewrite**. Đây **không còn là bản Safe**. Nếu bạn đã cài Extended, cập nhật module sẽ thay đổi phạm vi HTTPS interception trên thiết bị sau khi HTTPS Decryption được cấp phép. Sao lưu trước khi cập nhật, và không bật các module thử nghiệm Spotify/Locket/YouTube trùng lặp.
+
+Để giữ bộ lọc **không MITM**, dùng [Infiniti-All-In-One.sgmodule](modules/Infiniti-All-In-One.sgmodule). Xem [hướng dẫn Extended v2.1](docs/ALL-IN-ONE-EXTENDED.md). **Lưu ý:** 39 script nghiên cứu vẫn chỉ ở dạng chú thích; 4 khai báo script đang hoạt động không bảo đảm Premium hợp lệ.
+
+
 ## HTTPS Experimental — bản có Script và Giải mã HTTPS (bật riêng)
 
 Nếu Shadowrocket hiển thị **Giải mã HTTPS: 0 / Kịch bản: 0** cho bản Extended Safe thì đó là đúng thiết kế (39 URL script chỉ là chú thích). Đã tạo bản thay thế **[Infiniti-Extended-HTTPS-Experimental.sgmodule](modules/opt-in/Infiniti-Extended-HTTPS-Experimental.sgmodule)** có **3 RULE-SET, 4 khai báo script, 1 mục MITM gồm 5 hostname/pattern**, cùng các mục rewrite YouTube/Spotify.
@@ -9,15 +16,15 @@ Nếu Shadowrocket hiển thị **Giải mã HTTPS: 0 / Kịch bản: 0** cho b�
 Bản mới **không tự bật trên iPhone**, không nhập cùng bản Extended Safe, không bảo đảm mở khóa Premium và có rủi ro giải mã HTTPS qua API RevenueCat dùng chung. [Hướng dẫn nhập, kiểm tra số lượng và quay về bản an toàn](docs/HTTPS-EXPERIMENTAL-SETUP.md).
 
 
-## All-in-One Extended v2.0 — tích hợp sâu 39 nguồn JS
+## All-in-One Extended v2.1 — HTTPS Experimental
 
 **[Infiniti-All-In-One-Extended.sgmodule](modules/Infiniti-All-In-One-Extended.sgmodule)** là bản cài đặt hợp nhất **Advertising + Privacy + hostsVN threat protection**, kèm danh mục **39 script URL** theo từng nhóm ứng dụng (YouTube, Spotify, Locket/RevenueCat, Sub-Store, ứng dụng khác).
 
 **RAW:** `https://raw.githubusercontent.com/infiniti-money/Shadowrocket/main/modules/Infiniti-All-In-One-Extended.sgmodule`
 
-**Phân biệt rõ:** 39 URL script được liệt kê dưới dạng comment để tra cứu, **không chạy**; bản Extended không có MITM. Nếu muốn thử các script trước đây đã thêm, chúng vẫn ở `modules/opt-in/` riêng, chưa kiểm toán/không bảo đảm Premium hoạt động. **Chỉ bật một trong hai bản All-in-One thông thường và Extended** để tránh chồng bộ lọc.
+**Phân biệt rõ:** 39 URL script nghiên cứu vẫn là comment; **4 script khác đang hoạt động** và bản Extended v2.1 **có MITM**. Nếu muốn thử các script trước đây đã thêm, chúng vẫn ở `modules/opt-in/` riêng, chưa kiểm toán/không bảo đảm Premium hoạt động. **Chỉ bật một trong hai bản All-in-One thông thường và Extended**, đồng thời tắt các module Spotify/Locket/YouTube trùng để tránh xung đột.
 
-Đã thêm [bộ kiểm tra toàn bộ 39 URL](scripts/validate_extended.py) và [hướng dẫn](docs/ALL-IN-ONE-EXTENDED.md). Đừng coi việc liệt kê đủ source là đã kích hoạt mọi tính năng Premium.
+Đã thêm [bộ kiểm tra cấu trúc 39 URL và 4 script hoạt động](scripts/validate_extended.py) và [hướng dẫn](docs/ALL-IN-ONE-EXTENDED.md). Đừng coi việc liệt kê đủ source là đã kích hoạt mọi tính năng Premium.
 
 
 ## 🚀 Nâng cấp v1.1 — giám sát nguồn tự động
