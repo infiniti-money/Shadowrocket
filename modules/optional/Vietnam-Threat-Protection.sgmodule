@@ -1,0 +1,10 @@
+#!name=Infiniti Vietnam Threat Protection
+#!desc=Optional suspicious-domain protection from hostsVN; no MITM
+#!author=infiniti-money
+#!homepage=https://github.com/infiniti-money/Shadowrocket
+
+# Optional additional protection. Do not treat as malware detection or phishing guarantee.
+# hostsVN source is the threat extension, NOT its hosts-format adblock list.
+# May block websites falsely identified as threats. Review logs before whitelisting.
+[Rule]
+RULE-SET,https://raw.githubusercontent.com/bigdargon/hostsVN/master/extensions/threat/surge-rule.conf,REJECT
