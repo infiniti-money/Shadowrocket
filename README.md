@@ -129,3 +129,9 @@ Các nguồn `ithtelab`, `GMOogway`, `poohyeban`, `hongkongkiwi` được nghiê
 Các bản thử nghiệm mới có file riêng trong [modules/opt-in](modules/opt-in), gồm **Spotify** (2 script từ app2smile), **Locket** (2 script liên quan RevenueCat từ HuuTriet) và **YouTube** (URL Rewrite giới hạn, không nhúng script Premium chưa kiểm toán). Xem [hướng dẫn, rủi ro và cách thử](docs/OPT-IN-MODULES.md).
 
 **Mặc định KHÔNG bật** trong Infiniti All-in-One, vì cần HTTPS MITM, có thể xung đột với ứng dụng hoặc can thiệp xác thực thuê bao. Chỉ lưu file trên GitHub không kích hoạt module trên iPhone. Các chức năng trả phí không được xác nhận là đã khôi phục hoặc có thuê bao hợp lệ. GitHub Actions mặc định chỉ chứng nhận bộ lọc domain an toàn, **không kiểm toán script opt-in**.
+
+## Bản tổng hợp ứng dụng (bật riêng, rủi ro cao)
+
+Đã tạo [All-Apps-Experimental.sgmodule](modules/opt-in/All-Apps-Experimental.sgmodule) để gom các quy tắc **Spotify, Locket và YouTube**, cộng với Advertising + Privacy. File này có MITM và JavaScript can thiệp phản hồi thuê bao; **không bật mặc định**, không xác nhận gói Premium hợp lệ và chưa kiểm thử trên iPhone.
+
+Không bật đồng thời bản tổng hợp với các module lẻ hay các gói 10in1 cũ. [Đọc hướng dẫn và cách quay lại cấu hình cũ](docs/ALL-APPS-EXPERIMENTAL.md). GitHub CI mặc định **không chứng nhận** an toàn của các script này. Bản chính `Infiniti-All-In-One.sgmodule` vẫn không MITM.
