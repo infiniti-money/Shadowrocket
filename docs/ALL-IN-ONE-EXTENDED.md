@@ -1,51 +1,42 @@
-# Infiniti All-in-One Ultimate v3.2 — bản tổng hợp duy nhất
+# Infiniti All-in-One Ultimate v3.3 — ALL 39 SCRIPT URLS ENABLED (HIGH RISK)
 
-**URL cập nhật bản Extended hiện có:**
+The user's original Extended module URL has been updated **in place**:
 
 ```text
 https://raw.githubusercontent.com/infiniti-money/Shadowrocket/main/modules/Infiniti-All-In-One-Extended.sgmodule
 ```
 
-Đây là một **module Shadowrocket**, không phải một profile VPN có máy chủ proxy được cấu hình sẵn. Không cần nhập URL mới nếu bạn đang dùng Extended: cập nhật lại module đã đăng ký.
+This is an experimental Shadowrocket **module**, not a complete VPN/proxy server profile.
 
-## Tất cả phần đã tích hợp
+## Active module sections
 
-| Mục trong file | Thành phần |
-|---|---|
-| `[Rule]` | 5 quy tắc: AdBlock, Privacy, hostsVN threat và 2 chặn YouTube UDP |
-| `[Header Rewrite]` | 2 khai báo |
-| `[Url Rewrite]` | 5 khai báo |
-| `[Map Local]` | 1 khai báo |
-| `[Script]` | 7 khai báo đang bật |
-| `[MITM]` | Một dòng cấu hình 21 hostname/pattern giải mã HTTPS |
-| Danh mục JS | **39 URL riêng biệt**: 7 đang bật, 32 chỉ ghi chú |
+| Section | Active entries |
+|---|---:|
+| `[Rule]` | 5 |
+| `[Header Rewrite]` | 2 |
+| `[Url Rewrite]` | 5 |
+| `[Map Local]` | 1 |
+| `[Script]` | **39 unique source URLs** |
+| `[MITM]` | 1 directive with **26 host patterns** |
 
-Dự án vẫn lưu các nguồn Gaucuto/duyvinh09 và các module từng ứng dụng; **chỉ bật một bản tổng hợp trên iPhone để tránh ghi đè và xung đột**.
+Scripts are individually named `SRC_01_...` through `SRC_39_...` to avoid duplicate declaration names. Their original source URLs are retained. The first matching original declaration per URL was reused, with minor normalization such as whitespace and dropping unresolved script arguments. This prevents duplicate URL declarations, but does NOT prevent overlap of request/response patterns or API handlers.
 
-## Vì sao không bật đủ 39 script?
+## Important caveats
 
-- 20 URL trong danh mục từng được báo lỗi HTTP 404, nên được giữ để tự kiểm tra nhưng **không được chạy mặc định**.
-- Các script từ nguồn khác có thể xử lý cùng endpoint và ghi đè lẫn nhau.
-- Một số script sửa phản hồi cấp quyền thuê bao hoặc API RevenueCat dùng chung, có thể làm ảnh hưởng ứng dụng khác.
-- Đủ `[MITM]` và `[Script]` chỉ cho biết cấu hình khai báo các chức năng. Nó không xác nhận script được tải, TLS giải mã thành công, hoặc có quyền Premium hợp lệ.
+- **20 of 39 URLs** in the existing repository inventory previously returned HTTP 404. These have now been **enabled** at the user's explicit request; Shadowrocket may fail to download and execute them.
+- Competing Spotify, Locket, RevenueCat and YouTube scripts can process the same endpoints and conflict. Multiple Locket/RevenueCat scripts may modify subscription data of unrelated apps.
+- This release is **not tested on iPhone** and does not guarantee Premium access, ad blocking inside every application, or smooth network connectivity.
+- MITM host patterns do not cause iOS to trust a CA. Install and manage any authorized test CA **locally**. No `ca-p12` private key or `ca-passphrase` is stored on GitHub.
+- Do not enable alongside other all-in-one or per-app experimental modules. Back up your active configuration, use a test device/account, and disable this module if you encounter TLS/login/network errors.
 
-Không đưa `ca-p12` hoặc `ca-passphrase` từ hai file người dùng tải lên vào GitHub. Đó là vật liệu khóa riêng và mật khẩu của CA. Nếu cần kiểm thử HTTPS Decryption, thiết lập chứng chỉ do bạn quản lý cục bộ trên iPhone; không chia sẻ chứng chỉ có khóa riêng.
-
-## Kiểm tra sau cập nhật
-
-1. Sao lưu cấu hình và tắt các module All-in-One, Spotify, Locket và YouTube khác.
-2. Cập nhật module từ URL cũ; xác nhận thấy **Ultimate v3.2**.
-3. Kiểm tra chi tiết Shadowrocket: `[Rule]`, Rewrite, Map Local, Script và HTTPS Decryption.
-4. Phần giải mã chỉ hoạt động sau khi bạn cấu hình tin cậy CA trên thiết bị và ứng dụng cho phép; một số ứng dụng có certificate pinning.
-5. Nếu proxy, đăng nhập, ứng dụng ngân hàng, video hoặc mạng gặp lỗi, tắt module thử nghiệm và quay về bản [không MITM](../modules/Infiniti-All-In-One.sgmodule).
-
-## Kiểm tra trên GitHub
+## Validation
 
 ```bash
 python3 scripts/validate_extended.py
 python3 scripts/check_script_sources.py --online
 ```
 
-CI xác minh cấu trúc, không có khóa riêng CA và URL được lập danh mục không trùng. CI **không chứng nhận cấu hình chạy trơn tru trên iPhone**.
+CI verifies the number of declarations, URL uniqueness, static sections and secret absence. It cannot verify JS code safety, runtime behavior or a valid subscription.
 
-**Lưu ý về các nguồn lỗi:** Khi bạn muốn thử một JS từng 404, kiểm tra lại URL đó còn tải được và code hợp lệ trước khi tự bỏ dấu `#`. Chỉ bật một handler cho mỗi endpoint nếu không chắc về thứ tự chạy.
+To return to a safe ad/privacy filter without MITM, use:
+`https://raw.githubusercontent.com/infiniti-money/Shadowrocket/main/modules/Infiniti-All-In-One.sgmodule`
