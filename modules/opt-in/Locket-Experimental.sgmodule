@@ -1,0 +1,17 @@
+#!name=Infiniti Locket Experimental
+#!desc=Optional third-party Locket Gold test module; broad RevenueCat MITM; unverified
+#!author=infiniti-money (integration); scripts by HuuTriet
+#!homepage=https://github.com/HuuTriet/ios-scripts-collection
+
+# WARNING: Targets subscription verification through RevenueCat.
+# This script does NOT create a legitimate Apple purchase or entitlement.
+# api.revenuecat.com is shared by many apps: enabling may affect unrelated apps.
+# Prefer official Restore Purchases for legitimately held subscriptions.
+# Do not run with other RevenueCat/receipt scripts.
+
+[Script]
+Locket_Premium = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$),script-path=https://raw.githubusercontent.com/HuuTriet/ios-scripts-collection/main/Locket_Triet.js,requires-body=true,timeout=60
+Clean_Header = type=http-request,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers),script-path=https://raw.githubusercontent.com/HuuTriet/ios-scripts-collection/main/CleanHeader.js,timeout=60
+
+[MITM]
+hostname = %APPEND% api.revenuecat.com
