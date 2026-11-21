@@ -1,14 +1,15 @@
-#!name=Infiniti All-in-One Extended - Safe
-#!desc=Advertising + Privacy + Vietnam threat protection; 39 archived JS links (DISABLED)
+#!name=Infiniti All-in-One Extended - HTTPS Experimental
+#!desc=AdBlock+Privacy+VN Threats; 4 active JS, HTTPS MITM and 39 indexed script sources
 #!author=infiniti-money
 #!homepage=https://github.com/infiniti-money/Shadowrocket
 #!url=https://raw.githubusercontent.com/infiniti-money/Shadowrocket/main/modules/Infiniti-All-In-One-Extended.sgmodule
 
-# v2.0 - script library integration: links are documentation only.
-# 39 JS script-path references are indexed below, NONE are active.
-# No MITM, no Header Rewrite, no Url Rewrite, no Premium entitlement changes.
-# Never run at same time as standard All-In-One or duplicate advertising modules.
-# VPN/proxy configuration must be provided by your existing Shadowrocket profile.
+# v2.1 HTTPS EXPERIMENTAL - this existing URL now has active MITM and remote scripts!
+# 39 external script references remain as comments; 4 scripts below are ACTIVE.
+# WARNING: MITM can affect app subscriptions; scripts are NOT proven safe/working.
+# Do not enable alongside the separate HTTPS/Spotify/Locket/YouTube or standard modules.
+# Backup configuration and review source code; no valid Premium entitlement is granted.
+# Shared api.revenuecat.com MITM may affect other apps. Use authorized test environments.
 
 [Rule]
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list,REJECT
@@ -104,3 +105,22 @@ RULE-SET,https://raw.githubusercontent.com/bigdargon/hostsVN/master/extensions/t
 # Source: https://raw.githubusercontent.com/veteneso/Shadowrocket-modules/refs/heads/main/Soundcloud.js
 # JS-39 [UNVERIFIED-OR-RETRIEVED] llygad/TrueCaller
 # Source: https://raw.githubusercontent.com/veteneso/Shadowrocket-modules/refs/heads/main/truecaller.js
+
+# ===== ACTIVE EXPERIMENTAL HTTPS + SCRIPTS (TEST ONLY) =====
+
+[Header Rewrite]
+http-request ^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/user-customization-service\/v1\/customize$ header-del if-none-match
+
+[Url Rewrite]
+^https?://(www|s)\.youtube\.com/api/stats/ads _ reject-200
+^https?://(www|s)\.youtube\.com/(pagead|ptracking) _ reject-200
+^https?://s\.youtube\.com/api/stats/qoe\?adcontext _ reject-200
+
+[Script]
+spotify-json = type=http-request,pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
+spotify-proto = type=http-response,pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
+Locket_Premium = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$),script-path=https://raw.githubusercontent.com/HuuTriet/ios-scripts-collection/main/Locket_Triet.js,requires-body=true,timeout=60
+Clean_Header = type=http-request,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers),script-path=https://raw.githubusercontent.com/HuuTriet/ios-scripts-collection/main/CleanHeader.js,timeout=60
+
+[MITM]
+hostname = %APPEND% spclient.wg.spotify.com, *spclient.spotify.com, api.revenuecat.com, www.youtube.com, s.youtube.com
