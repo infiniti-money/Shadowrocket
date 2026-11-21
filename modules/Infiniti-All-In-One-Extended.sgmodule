@@ -1,0 +1,106 @@
+#!name=Infiniti All-in-One Extended - Safe
+#!desc=Advertising + Privacy + Vietnam threat protection; 39 archived JS links (DISABLED)
+#!author=infiniti-money
+#!homepage=https://github.com/infiniti-money/Shadowrocket
+#!url=https://raw.githubusercontent.com/infiniti-money/Shadowrocket/main/modules/Infiniti-All-In-One-Extended.sgmodule
+
+# v2.0 - script library integration: links are documentation only.
+# 39 JS script-path references are indexed below, NONE are active.
+# No MITM, no Header Rewrite, no Url Rewrite, no Premium entitlement changes.
+# Never run at same time as standard All-In-One or duplicate advertising modules.
+# VPN/proxy configuration must be provided by your existing Shadowrocket profile.
+
+[Rule]
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Privacy/Privacy.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/bigdargon/hostsVN/master/extensions/threat/surge-rule.conf,REJECT
+
+# === RESEARCH REGISTRY: DISABLED JS LINKS ===
+
+# --- YouTube (4 references) ---
+# JS-01 [PREVIOUS-404] youtube.request / youtube.response
+# Source: https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/youtube.response.js
+# JS-02 [UNVERIFIED-OR-RETRIEVED] dhungx/YouTube
+# Source: https://raw.githubusercontent.com/dhungx/modules-shadowrocket/refs/heads/main/js/Yt/youtube.response.preview.js
+# JS-03 [UNVERIFIED-OR-RETRIEVED] llygad/YouTubeRequest
+# Source: https://github.com/lonely0811/Surge/raw/main/js/youtube.request.preview.js
+# JS-04 [UNVERIFIED-OR-RETRIEVED] llygad/YouTubeResponse
+# Source: https://github.com/lonely0811/Surge/raw/main/js/youtube.response.preview.js
+
+# --- Spotify (6 references) ---
+# JS-05 [UNVERIFIED-OR-RETRIEVED] spotify-json
+# Source: https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
+# JS-06 [UNVERIFIED-OR-RETRIEVED] spotify-proto
+# Source: https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js
+# JS-07 [PREVIOUS-404] spotify-json
+# Source: https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/spotify-json.js
+# JS-08 [PREVIOUS-404] spotify-proto
+# Source: https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/spotify-proto.js
+# JS-09 [UNVERIFIED-OR-RETRIEVED] KhunTam/SpotifyJSON
+# Source: https://raw.githubusercontent.com/KhunTam/Shadowrocket/refs/heads/main/spotify-json.js
+# JS-10 [UNVERIFIED-OR-RETRIEVED] KhunTam/SpotifyProto
+# Source: https://raw.githubusercontent.com/KhunTam/Shadowrocket/refs/heads/main/spotify-proto.js
+
+# --- Locket & RevenueCat (10 references) ---
+# JS-11 [PREVIOUS-404] revenuecat
+# Source: https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/Locket_DuyVinh09.js
+# JS-12 [PREVIOUS-404] deleteHeader
+# Source: https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/deleteHeader.js
+# JS-13 [PREVIOUS-404] RevenueCatVip
+# Source: https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/revenuecat.js
+# JS-14 [PREVIOUS-404] iTunes
+# Source: https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/iTunes.js
+# JS-15 [UNVERIFIED-OR-RETRIEVED] Locket_Premium
+# Source: https://raw.githubusercontent.com/HuuTriet/ios-scripts-collection/main/Locket_Triet.js
+# JS-16 [UNVERIFIED-OR-RETRIEVED] TTSan1208/Locket
+# Source: https://raw.githubusercontent.com/TTSan1208/scripts/main/locket.js
+# JS-17 [UNVERIFIED-OR-RETRIEVED] Trung-Han/Locket
+# Source: https://raw.githubusercontent.com/NightmarketServer/Locket/main/locketfix3.js
+# JS-18 [UNVERIFIED-OR-RETRIEVED] Trung-Han/LocketHeader
+# Source: https://raw.githubusercontent.com/NightmarketServer/Locket/main/header2.js
+# JS-19 [UNVERIFIED-OR-RETRIEVED] llygad/Locket
+# Source: https://raw.githubusercontent.com/veteneso/Shadowrocket-modules/refs/heads/main/LocketCamera.js
+# JS-20 [UNVERIFIED-OR-RETRIEVED] llygad/DeleteHeaders
+# Source: https://raw.githubusercontent.com/veteneso/Shadowrocket-modules/refs/heads/main/deleteheaders%2Cjs
+
+# --- Sub-Store (3 references) ---
+# JS-21 [UNVERIFIED-ASSET] Sub-Store Core
+# Source: https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js
+# JS-22 [UNVERIFIED-ASSET] Sub-Store Simple
+# Source: https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js
+# JS-23 [UNVERIFIED-ASSET] Sub-Store Sync
+# Source: https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js
+
+# --- Other (16 references) ---
+# JS-24 [PREVIOUS-404] SoundCloudGo+
+# Source: https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/SoundCloudGoPlus.js
+# JS-25 [PREVIOUS-404] AlightMotion
+# Source: https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/AlightMotion.js
+# JS-26 [PREVIOUS-404] PicsArt
+# Source: https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/PicsArt.js
+# JS-27 [PREVIOUS-404] Wink
+# Source: https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/WinkVipCrack.js
+# JS-28 [PREVIOUS-404] Truecaller
+# Source: https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/TrueCaller.js
+# JS-29 [PREVIOUS-404] Kinemaster
+# Source: https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/Kinemaster.js
+# JS-30 [PREVIOUS-404] Camscanner
+# Source: https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/camScanner.js
+# JS-31 [PREVIOUS-404] BeautyPlus
+# Source: https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/BeautyPlus.js
+# JS-32 [PREVIOUS-404] VSCO
+# Source: https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/VSCO.js
+# JS-33 [PREVIOUS-404] PicsArtStorages
+# Source: https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/PicsArtStorages.js
+# JS-34 [PREVIOUS-404] Lightroom
+# Source: https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/lightroom.js
+# JS-35 [PREVIOUS-404] Snow
+# Source: https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/Snow.js
+# JS-36 [PREVIOUS-404] Meitu
+# Source: https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/MeiTuXiuXiu.js
+# JS-37 [UNVERIFIED-OR-RETRIEVED] Clean_Header
+# Source: https://raw.githubusercontent.com/HuuTriet/ios-scripts-collection/main/CleanHeader.js
+# JS-38 [UNVERIFIED-OR-RETRIEVED] llygad/SoundCloud
+# Source: https://raw.githubusercontent.com/veteneso/Shadowrocket-modules/refs/heads/main/Soundcloud.js
+# JS-39 [UNVERIFIED-OR-RETRIEVED] llygad/TrueCaller
+# Source: https://raw.githubusercontent.com/veteneso/Shadowrocket-modules/refs/heads/main/truecaller.js
