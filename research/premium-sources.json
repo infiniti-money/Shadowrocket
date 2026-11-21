@@ -1,0 +1,56 @@
+{
+  "updated": "2026-11-21",
+  "mode": "research-only",
+  "automatically_enabled": false,
+  "sources": [
+    {
+      "app": "Spotify",
+      "repository": "app2smile/rules",
+      "url": "https://raw.githubusercontent.com/app2smile/rules/master/module/spotify.module",
+      "risk": "high",
+      "verified_raw": true
+    },
+    {
+      "app": "Spotify",
+      "repository": "KhunTam/Shadowrocket",
+      "url": "https://raw.githubusercontent.com/KhunTam/Shadowrocket/main/spotify.sgmodule",
+      "risk": "high",
+      "verified_raw": true
+    },
+    {
+      "app": "Locket",
+      "repository": "HuuTriet/ios-scripts-collection",
+      "url": "https://raw.githubusercontent.com/HuuTriet/ios-scripts-collection/main/LocketTriet.sgmodule",
+      "risk": "very-high",
+      "verified_raw": true
+    },
+    {
+      "app": "Locket",
+      "repository": "TTSan1208/scripts",
+      "url": "https://raw.githubusercontent.com/TTSan1208/scripts/main/locket.sgmodule",
+      "risk": "very-high",
+      "verified_raw": true
+    },
+    {
+      "app": "Locket",
+      "repository": "Trung-Han/LocketIOS15-26",
+      "url": "https://raw.githubusercontent.com/Trung-Han/LocketIOS15-26/main/LocketPTP",
+      "risk": "very-high",
+      "verified_raw": true
+    },
+    {
+      "app": "YouTube",
+      "repository": "dhungx/modules-shadowrocket",
+      "url": "https://raw.githubusercontent.com/dhungx/modules-shadowrocket/main/youtube.module",
+      "risk": "high",
+      "verified_raw": true
+    },
+    {
+      "app": "Mixed",
+      "repository": "llygad/Shadowrocket-modules",
+      "url": "https://raw.githubusercontent.com/llygad/Shadowrocket-modules/main/All.sgmodule",
+      "risk": "very-high",
+      "verified_raw": true
+    }
+  ]
+}
