@@ -82,3 +82,7 @@ Bộ kiểm tra tĩnh **không chứng nhận module tương thích mọi phiên
 **Lưu ý:** Hai bản reviewed cố ý chỉ chặn domain theo AdvertisingLite, nên không khôi phục tính năng Pro/Premium, không bảo đảm bỏ quảng cáo trong ứng dụng YouTube. Hai file reviewed là hai biến thể độc lập; **chỉ bật một**, không cần bật cùng lúc hoặc chồng với AdBlock Lite.
 
 **Tự kiểm tra:** `python3 scripts/validate.py` và [GitHub Actions](https://github.com/infiniti-money/Shadowrocket/actions). Bộ kiểm tra không chứng nhận tương thích thực tế trên iPhone.
+
+## Tình trạng khôi phục tính năng Premium
+
+Xem [PREMIUM-RECOVERY-STATUS.md](research/PREMIUM-RECOVERY-STATUS.md) để biết những nguồn còn truy cập được, chức năng nào cần kiểm thử, và giới hạn xác minh quyền thuê bao. **Chưa có module mở khóa Premium nào được khôi phục hoặc kích hoạt.** Các module AdBlock Lite và Reviewed Safe vẫn không MITM.
