@@ -1,35 +1,43 @@
 #!/usr/bin/env python3
-"""Validate Ultimate v3.3 ALL ACTIVE source references, not runtime behavior."""
+"""Check v3.4 recovery module structure; never executes remote scripts."""
 from pathlib import Path
-import json, re
+import json
+import re
 
-root=Path(__file__).resolve().parents[1]
-s=(root/"modules/Infiniti-All-In-One-Extended.sgmodule").read_text(encoding="utf-8")
-inv=json.loads((root/"research/all-script-inventory.json").read_text(encoding="utf-8"))
-expected={x["url"] for x in inv["scripts"]}
-assert len(expected)==39
-assert not re.search(r"(?im)^\s*(?:ca-p12|ca-passphrase)\s*=",s), "CA private secrets"
-sections=re.findall(r"(?m)^\[([^\]]+)\]\s*$",s)
-assert sections==["Rule","Header Rewrite","Url Rewrite","Map Local","Script","MITM"],sections
+ROOT = Path(__file__).resolve().parents[1]
+content = (ROOT / "modules/Infiniti-All-In-One-Extended.sgmodule").read_text(encoding="utf-8")
+catalog = json.loads((ROOT / "research/all-script-inventory.json").read_text(encoding="utf-8"))
+expected = {item["url"] for item in catalog["scripts"]}
+assert len(expected) == len(catalog["scripts"]) == 39
+assert not re.search(r"(?im)^\s*(?:ca-p12|ca-passphrase)\s*=", content)
+sections = re.findall(r"(?m)^\[([^\]]+)\]\s*$", content)
+assert sections == ["Rule","Header Rewrite","Url Rewrite","Script","MITM"], sections
 
-def active(name):
-    body=s.split(f"[{name}]\n",1)[1].split("\n[",1)[0]
-    return [x.strip() for x in body.splitlines() if x.strip() and not x.lstrip().startswith("#")]
+def active(section):
+    block = content.split("[" + section + "]\n", 1)[1].split("\n[", 1)[0]
+    return [s.strip() for s in block.splitlines()
+            if s.strip() and not s.strip().startswith("#")]
 
-for name,count in {"Rule":5,"Header Rewrite":2,"Url Rewrite":5,"Map Local":1,"Script":39,"MITM":1}.items():
-    assert len(active(name))==count,(name,len(active(name)),count)
+for name,count in {"Rule":3, "Header Rewrite":1, "Url Rewrite":3, "Script":2, "MITM":1}.items():
+    assert len(active(name))==count, (name,len(active(name)),count)
 
-urls=[]
-names=[]
+active_urls=[]
 for line in active("Script"):
-    p=re.search(r"script-path=(https?://[^,\s]+)",line)
-    assert p and "type=" in line and ("pattern=" in line or "type=cron" in line),line
-    urls.append(p.group(1));names.append(line.split("=",1)[0].strip())
-assert len(set(urls))==39 and set(urls)==expected
-assert len(set(names))==39
-hostline=active("MITM")[0]
-assert hostline.startswith("hostname = %APPEND% ") and hostline.count("%APPEND%")==1
-hosts=[x.strip() for x in hostline.split("=",1)[1].replace("%APPEND%","",1).split(",")]
-assert len(hosts)==len(set(hosts))==26
-print("PASS: 39 unique active script URLs, six config sections and 26 MITM host patterns")
-print("WARNING: 20 sources previously 404, overlapping API handlers; runtime NOT verified")
+    match=re.search(r"script-path=(https?://[^,\s]+)",line)
+    assert match and "type=" in line and "pattern=" in line, line
+    active_urls.append(match.group(1))
+assert len(set(active_urls))==2
+assert all("app2smile/rules" in u for u in active_urls)
+archived = re.findall(r"(?m)^# Source: (https?://\S+)$", content)
+assert len(archived)==37 and len(set(archived))==37
+assert set(active_urls).isdisjoint(archived)
+assert set(active_urls+archived)==expected
+assert all(item["url"] not in active_urls
+           for item in catalog["scripts"]
+           if item.get("availability")=="source-previously-404")
+mitm=active("MITM")[0]
+assert mitm.count("%APPEND%")==1 and mitm.startswith("hostname = %APPEND% ")
+assert "api.revenuecat.com" not in mitm and "buy.itunes.apple.com" not in mitm
+print("PASS: recovery v3.4 retains 39 distinct URLs (2 active, 37 archived)")
+print("PASS: 3 filter rules, 1 header, 3 URL rewrites, MITM without shared purchases")
+print("WARNING: Shadowrocket runtime and app functionality remain unverified")
