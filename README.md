@@ -141,3 +141,9 @@ Không bật đồng thời bản tổng hợp với các module lẻ hay các g
 Đã bổ sung [bảng nghiên cứu mitmproxy, HTTP Toolkit, Proxyman và tài liệu Shadowrocket](research/IOS-HTTPS-INSPECTION.md). Các phần mới gồm [mẫu HTTPS debug chỉ dành cho ứng dụng của chính bạn](modules/templates/HTTPS-Debug-Own-App.sgmodule.example) (tất cả dòng MITM đều bị comment, **không hoạt động**) và [trình kiểm toán tĩnh scope MITM](scripts/audit_mitm.py), được chạy trong GitHub Actions.
 
 **Không tự động bật giải mã HTTPS:** Các module Premium/opt-in hiện có vẫn ở trạng thái thử nghiệm, không được tự động nhập vào bản All-in-One an toàn. Chỉ dùng chứng chỉ CA và MITM với app/domain bạn có quyền kiểm tra; không giải mã lưu lượng tài khoản nhạy cảm hoặc chia sẻ khóa CA trong repository.
+
+## 📦 Toàn bộ nguồn script iOS để tự xác minh
+
+Đã lập [danh mục 39 script-path URL](research/all-script-inventory.json) từ hai bản 10in1 và các module cộng đồng Spotify, Locket, YouTube, SoundCloud, Truecaller cùng nhiều ứng dụng khác. Xem [hướng dẫn xác minh](docs/SCRIPT-VERIFICATION-WORKSPACE.md). Chạy `python3 scripts/check_script_sources.py --online` để kiểm tra liên kết, **không thực thi JavaScript**.
+
+Danh mục chứa liên kết nguồn và tên script, **không sao chép toàn bộ mã JS của tác giả bên ngoài hoặc tự kích hoạt tất cả**. Một số URL duyvinh09 trước đây trả về 404. Bản All-in-One chính vẫn không MITM; các bản Premium có sẵn trong `modules/opt-in/` và `modules/experimental/` chỉ dùng cho nghiên cứu có kiểm soát.
