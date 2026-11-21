@@ -316,6 +316,139 @@
       ],
       "availability": "previously-retrieved-or-unverified",
       "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/TTSan1208/scripts/main/locket.js",
+      "names": [
+        "TTSan1208/Locket"
+      ],
+      "source_files": [
+        "external-public-module"
+      ],
+      "availability": "not-individually-verified",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NightmarketServer/Locket/main/locketfix3.js",
+      "names": [
+        "Trung-Han/Locket"
+      ],
+      "source_files": [
+        "external-public-module"
+      ],
+      "availability": "not-individually-verified",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NightmarketServer/Locket/main/header2.js",
+      "names": [
+        "Trung-Han/LocketHeader"
+      ],
+      "source_files": [
+        "external-public-module"
+      ],
+      "availability": "not-individually-verified",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/dhungx/modules-shadowrocket/refs/heads/main/js/Yt/youtube.response.preview.js",
+      "names": [
+        "dhungx/YouTube"
+      ],
+      "source_files": [
+        "external-public-module"
+      ],
+      "availability": "not-individually-verified",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/KhunTam/Shadowrocket/refs/heads/main/spotify-json.js",
+      "names": [
+        "KhunTam/SpotifyJSON"
+      ],
+      "source_files": [
+        "external-public-module"
+      ],
+      "availability": "not-individually-verified",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/KhunTam/Shadowrocket/refs/heads/main/spotify-proto.js",
+      "names": [
+        "KhunTam/SpotifyProto"
+      ],
+      "source_files": [
+        "external-public-module"
+      ],
+      "availability": "not-individually-verified",
+      "active_in_main": false
+    },
+    {
+      "url": "https://github.com/lonely0811/Surge/raw/main/js/youtube.request.preview.js",
+      "names": [
+        "llygad/YouTubeRequest"
+      ],
+      "source_files": [
+        "external-public-module"
+      ],
+      "availability": "not-individually-verified",
+      "active_in_main": false
+    },
+    {
+      "url": "https://github.com/lonely0811/Surge/raw/main/js/youtube.response.preview.js",
+      "names": [
+        "llygad/YouTubeResponse"
+      ],
+      "source_files": [
+        "external-public-module"
+      ],
+      "availability": "not-individually-verified",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/veteneso/Shadowrocket-modules/refs/heads/main/Soundcloud.js",
+      "names": [
+        "llygad/SoundCloud"
+      ],
+      "source_files": [
+        "external-public-module"
+      ],
+      "availability": "not-individually-verified",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/veteneso/Shadowrocket-modules/refs/heads/main/LocketCamera.js",
+      "names": [
+        "llygad/Locket"
+      ],
+      "source_files": [
+        "external-public-module"
+      ],
+      "availability": "not-individually-verified",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/veteneso/Shadowrocket-modules/refs/heads/main/deleteheaders%2Cjs",
+      "names": [
+        "llygad/DeleteHeaders"
+      ],
+      "source_files": [
+        "external-public-module"
+      ],
+      "availability": "not-individually-verified",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/veteneso/Shadowrocket-modules/refs/heads/main/truecaller.js",
+      "names": [
+        "llygad/TrueCaller"
+      ],
+      "source_files": [
+        "external-public-module"
+      ],
+      "availability": "not-individually-verified",
+      "active_in_main": false
     }
-  ]
+  ],
+  "notes": "Includes script-path references extracted from original Gaucuto, duyvinh09, current All-Apps, and publicly retrieved third-party module definitions. No source code copied or executed."
 }
