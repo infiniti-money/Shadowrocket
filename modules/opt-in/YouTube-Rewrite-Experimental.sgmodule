@@ -1,0 +1,18 @@
+#!name=Infiniti YouTube Experimental
+#!desc=Optional YouTube rewrite rules only; no external JavaScript or Premium claims
+#!author=infiniti-money (review), patterns credited to dhungx
+#!homepage=https://github.com/dhungx/modules-shadowrocket
+
+# Original source: https://raw.githubusercontent.com/dhungx/modules-shadowrocket/main/youtube.module
+# No third-party script loaded: upstream uses unexpanded configuration placeholders and
+# a large preview.js not independently audited for current iOS/Shadowrocket compatibility.
+# WARNING: HTTPS URL rewrites can break playback. This is not YouTube Premium.
+# No blanket UDP block/QUIC rejection. Remove if playback fails.
+
+[Url Rewrite]
+^https?://(www|s)\.youtube\.com/api/stats/ads _ reject-200
+^https?://(www|s)\.youtube\.com/(pagead|ptracking) _ reject-200
+^https?://s\.youtube\.com/api/stats/qoe\?adcontext _ reject-200
+
+[MITM]
+hostname = %APPEND% www.youtube.com, s.youtube.com
