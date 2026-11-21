@@ -20,6 +20,8 @@ jobs:
         run: python3 scripts/validate.py
       - name: Validate extended All-in-One script index
         run: python3 scripts/validate_extended.py
+      - name: Check redacted uploaded source archives
+        run: python3 scripts/validate_user_sources.py
       - name: Inventory external script sources (no execution)
         run: python3 scripts/check_script_sources.py
       - name: Check experimental combined module structure
