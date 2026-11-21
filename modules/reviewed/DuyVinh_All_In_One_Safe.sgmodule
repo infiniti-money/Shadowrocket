@@ -1,0 +1,16 @@
+#!name=DuyVinh All In One - Reviewed Safe
+#!desc=Safe ad-domain filtering only; external premium scripts disabled
+#!author=infiniti-money (review); source credited to duyvinh09
+#!url=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/All_In_One.sgmodule
+
+# Review: 2026-11-21
+# User-provided original kept in modules/experimental/All_In_One_duyvinh09.sgmodule
+# Original upstream returned 404 during inspection.
+# Fixed by removing invalid active entries, not by guessing missing JavaScript.
+# Broken original issues: engine={{{script}}} placeholder, malformed VSCO line,
+# empty hostname in MITM list, plus overlapping RevenueCat rules.
+# No HTTP/HTTPS rewrite or MITM is enabled in this reviewed variant.
+# YouTube, Spotify and app subscription premium features are NOT included.
+
+[Rule]
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/AdvertisingLite/AdvertisingLite.list,REJECT
