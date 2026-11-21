@@ -17,7 +17,7 @@ https://raw.githubusercontent.com/infiniti-money/Shadowrocket/main/modules/Infin
 | `[Url Rewrite]` | 5 khai báo |
 | `[Map Local]` | 1 khai báo |
 | `[Script]` | 7 khai báo đang bật |
-| `[MITM]` | Một dòng cấu hình 22 hostname/pattern giải mã HTTPS |
+| `[MITM]` | Một dòng cấu hình 21 hostname/pattern giải mã HTTPS |
 | Danh mục JS | **39 URL riêng biệt**: 7 đang bật, 32 chỉ ghi chú |
 
 Dự án vẫn lưu các nguồn Gaucuto/duyvinh09 và các module từng ứng dụng; **chỉ bật một bản tổng hợp trên iPhone để tránh ghi đè và xung đột**.
