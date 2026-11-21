@@ -1,14 +1,11 @@
-#!name=Infiniti All-in-One Ultimate v3.2 - EXPERIMENTAL
-#!desc=Single module with AdBlock, Privacy, VN threats, rewrites, 7 enabled scripts and 39 unique script sources
+#!name=Infiniti All-in-One Ultimate v3.3 - ALL 39 ACTIVE
+#!desc=Full combined experimental module: 39 unique ACTIVE JS declarations plus MITM/Rewrites
 #!author=infiniti-money; third-party script copyright belongs to respective authors
 #!homepage=https://github.com/infiniti-money/Shadowrocket
 #!url=https://raw.githubusercontent.com/infiniti-money/Shadowrocket/main/modules/Infiniti-All-In-One-Extended.sgmodule
 
 # ONE-URL ULTIMATE EXPERIMENTAL v3.2 — other overlapping modules MUST be disabled.
 # Covers original 10in1, All_In_One and separately researched JS sources.
-# 39 DISTINCT external script URL references: 7 enabled, 32 disabled.
-# 20 inventory URLs were previously reported 404; 14 such active handlers now disabled.
-# 32 disabled entries DO NOT run and cannot provide their features until repaired.
 # RevenueCat is a shared API affecting unrelated apps; test with caution.
 # Script existence, URL response and device compatibility are NOT guaranteed.
 # No CA private key or password is included. Set up HTTPS trust locally if authorized.
@@ -36,81 +33,73 @@ http-request ^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:4
 [Map Local]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad 'data-type=text data="" status-code=200'
 
-[Script]
-# ENABLED — unique sources; availability and behavior NOT guaranteed
-Sub-Store Core = type=http-request,pattern=^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))),script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js,requires-body=true,timeout=120
-Sub-Store Simple = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js,requires-body=true
-Sub-Store Sync = type=cron,cronexp=0 0 * * *,wake-system=1,timeout=120,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js
-spotify-json = type=http-request,pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
-spotify-proto = type=http-response,pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
-Locket_Premium = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$),script-path=https://raw.githubusercontent.com/HuuTriet/ios-scripts-collection/main/Locket_Triet.js,requires-body=true,timeout=60
-Clean_Header = type=http-request,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers),script-path=https://raw.githubusercontent.com/HuuTriet/ios-scripts-collection/main/CleanHeader.js,timeout=60
+# v3.3: ALL 39 unique script source URLs have active script entries per explicit user request.
+# 20 sources previously 404. Their rules are present but may FAIL TO DOWNLOAD/RUN.
+# Overlapping Spotify, YouTube and RevenueCat handlers may conflict.
+# This is an experimental source merge, NOT a working Premium guarantee.
+# No CA private key or ca-passphrase is embedded. HTTPS trust is device-local.
+# Disable every overlapping standalone module and use only an authorized test device.
 
-# DISABLED — includes 404 and unverified alternatives; one reference per URL
-# JS-01 PREVIOUSLY-404 youtube.request/youtube.response
-# script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/youtube.response.js
-# JS-02 PREVIOUSLY-404 SoundCloudGo+
-# script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/SoundCloudGoPlus.js
-# JS-03 PREVIOUSLY-404 VSCO
-# script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/VSCO.js
-# JS-04 PREVIOUSLY-404 AlightMotion
-# script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/AlightMotion.js
-# JS-05 PREVIOUSLY-404 PicsArt
-# script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/PicsArt.js
-# JS-06 PREVIOUSLY-404 PicsArtStorages
-# script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/PicsArtStorages.js
-# JS-07 PREVIOUSLY-404 Wink
-# script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/WinkVipCrack.js
-# JS-08 PREVIOUSLY-404 Truecaller
-# script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/TrueCaller.js
-# JS-09 PREVIOUSLY-404 Lightroom
-# script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/lightroom.js
-# JS-10 PREVIOUSLY-404 Kinemaster
-# script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/Kinemaster.js
-# JS-11 PREVIOUSLY-404 Camscanner
-# script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/camScanner.js
-# JS-12 PREVIOUSLY-404 BeautyPlus
-# script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/BeautyPlus.js
-# JS-13 PREVIOUSLY-404 Snow
-# script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/Snow.js
-# JS-14 PREVIOUSLY-404 Meitu
-# script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/MeiTuXiuXiu.js
-# JS-15 PREVIOUSLY-404 revenuecat
-# script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/Locket_DuyVinh09.js
-# JS-16 PREVIOUSLY-404 deleteHeader
-# script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/deleteHeader.js
-# JS-17 PREVIOUSLY-404 spotify-json
-# script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/spotify-json.js
-# JS-18 PREVIOUSLY-404 spotify-proto
-# script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/spotify-proto.js
-# JS-19 PREVIOUSLY-404 RevenueCatVip
-# script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/revenuecat.js
-# JS-20 PREVIOUSLY-404 iTunes
-# script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/iTunes.js
-# JS-21 UNVERIFIED TTSan1208/Locket
-# script-path=https://raw.githubusercontent.com/TTSan1208/scripts/main/locket.js
-# JS-22 UNVERIFIED Trung-Han/Locket
-# script-path=https://raw.githubusercontent.com/NightmarketServer/Locket/main/locketfix3.js
-# JS-23 UNVERIFIED Trung-Han/LocketHeader
-# script-path=https://raw.githubusercontent.com/NightmarketServer/Locket/main/header2.js
-# JS-24 UNVERIFIED dhungx/YouTube
-# script-path=https://raw.githubusercontent.com/dhungx/modules-shadowrocket/refs/heads/main/js/Yt/youtube.response.preview.js
-# JS-25 UNVERIFIED KhunTam/SpotifyJSON
-# script-path=https://raw.githubusercontent.com/KhunTam/Shadowrocket/refs/heads/main/spotify-json.js
-# JS-26 UNVERIFIED KhunTam/SpotifyProto
-# script-path=https://raw.githubusercontent.com/KhunTam/Shadowrocket/refs/heads/main/spotify-proto.js
-# JS-27 UNVERIFIED llygad/YouTubeRequest
-# script-path=https://github.com/lonely0811/Surge/raw/main/js/youtube.request.preview.js
-# JS-28 UNVERIFIED llygad/YouTubeResponse
-# script-path=https://github.com/lonely0811/Surge/raw/main/js/youtube.response.preview.js
-# JS-29 UNVERIFIED llygad/SoundCloud
-# script-path=https://raw.githubusercontent.com/veteneso/Shadowrocket-modules/refs/heads/main/Soundcloud.js
-# JS-30 UNVERIFIED llygad/Locket
-# script-path=https://raw.githubusercontent.com/veteneso/Shadowrocket-modules/refs/heads/main/LocketCamera.js
-# JS-31 UNVERIFIED llygad/DeleteHeaders
-# script-path=https://raw.githubusercontent.com/veteneso/Shadowrocket-modules/refs/heads/main/deleteheaders%2Cjs
-# JS-32 UNVERIFIED llygad/TrueCaller
-# script-path=https://raw.githubusercontent.com/veteneso/Shadowrocket-modules/refs/heads/main/truecaller.js
+[Script]
+SRC_01_Sub_Store_Core = type=http-request,pattern=^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))),script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js,requires-body=true,timeout=120
+SRC_02_Sub_Store_Simple = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js,requires-body=true
+SRC_03_Sub_Store_Sync = type=cron,cronexp=0 0 * * *,wake-system=1,timeout=120,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js
+# PREVIOUSLY-404 — SRC_04_youtube_request
+SRC_04_youtube_request = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine=jsc,script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/youtube.response.js
+SRC_05_spotify_json = type=http-request,pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
+SRC_06_spotify_proto = type=http-response,pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
+# PREVIOUSLY-404 — SRC_07_SoundCloudGo_
+SRC_07_SoundCloudGo_ = type=http-response,pattern=https://api-mobile.soundcloud.com/configuration/ios,requires-body=1,script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/SoundCloudGoPlus.js
+# PREVIOUSLY-404 — SRC_08_AlightMotion
+SRC_08_AlightMotion = type=http-response,script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/AlightMotion.js,pattern=^https:\/\/us-central1-alight-creative\.cloudfunctions\.net\/getAccountStatusAndLicenses,max-size=131072,requires-body=true,timeout=10,enable=true
+# PREVIOUSLY-404 — SRC_09_PicsArt
+SRC_09_PicsArt = type=http-request,pattern=^https:\/\/api\.picsart\.com\/gw-v2\/shop\/subscription\/apple\/purchases,script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/PicsArt.js,requires-body=true,timeout=60
+# PREVIOUSLY-404 — SRC_10_Wink
+SRC_10_Wink = type=http-response,pattern=^https:\/\/api-sub\.meitu\.com\/v2\/user\/vip_info_by_group\.json,requires-body=1,script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/WinkVipCrack.js
+# PREVIOUSLY-404 — SRC_11_Truecaller
+SRC_11_Truecaller = type=http-response,pattern=^https:\/\/premium-[^.]+\.truecaller\.com\/v\d+\/(subscriptions\/status|products\/apple)(\?.*)?$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/TrueCaller.js
+# PREVIOUSLY-404 — SRC_12_Kinemaster
+SRC_12_Kinemaster = type=http-response,pattern=^https:\/\/api-account\.kinemasters\.com\/v\d\/user\/subscribe$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/Kinemaster.js
+# PREVIOUSLY-404 — SRC_13_Camscanner
+SRC_13_Camscanner = requires-body=1,script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/camScanner.js,type=http-response,pattern=https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\?
+# PREVIOUSLY-404 — SRC_14_BeautyPlus
+SRC_14_BeautyPlus = type=http-response,pattern=https:\/\/(api\.mr\.pixocial\.com\/v1\/manual_unlock|newbeee-api\.beautyplus\.com\/api\/v1\/asset\/balance),script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/BeautyPlus.js,requires-body=true,max-size=-1,timeout=60
+# PREVIOUSLY-404 — SRC_15_revenuecat
+SRC_15_revenuecat = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$),script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/Locket_DuyVinh09.js,requires-body=true,max-size=-1,timeout=60
+# PREVIOUSLY-404 — SRC_16_deleteHeader
+SRC_16_deleteHeader = type=http-request,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers),script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/deleteHeader.js,timeout=60
+# PREVIOUSLY-404 — SRC_17_spotify_json
+SRC_17_spotify_json = type=http-request,pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/spotify-json.js
+# PREVIOUSLY-404 — SRC_18_spotify_proto
+SRC_18_spotify_proto = type=http-response,pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/spotify-proto.js,script-update-interval=0
+# PREVIOUSLY-404 — SRC_19_VSCO
+SRC_19_VSCO = type=http-request,pattern=^https://api.revenuecat.com/.+/(receipts$|subscribers/?(.*?)*$),script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/VSCO.js,requires-body=true,timeout=60
+# PREVIOUSLY-404 — SRC_20_PicsArtStorages
+SRC_20_PicsArtStorages = type=http-request,pattern=^https:\/\/api\.picsart\.com\/gw-v2\/cloud-storage\/v1\/me\/storages,script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/PicsArtStorages.js,requires-body=true,timeout=60
+# PREVIOUSLY-404 — SRC_21_Lightroom
+SRC_21_Lightroom = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v\d\/accounts,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/lightroom.js,script-update-interval=-1
+# PREVIOUSLY-404 — SRC_22_RevenueCatVip
+SRC_22_RevenueCatVip = type=http-response,pattern=^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/[^/]+$),script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/revenuecat.js,requires-body=true,max-size=-1,timeout=60
+# PREVIOUSLY-404 — SRC_23_iTunes
+SRC_23_iTunes = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/iTunes.js,requires-body=true,max-size=-1,timeout=60
+# PREVIOUSLY-404 — SRC_24_Snow
+SRC_24_Snow = type=http-response,pattern=^https?:\/\/user-snow-api\.snow\.me\/v\d\/purchase\/subscription\/subscriber\/status,script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/Snow.js,requires-body=true,max-size=-1,timeout=60
+# PREVIOUSLY-404 — SRC_25_Meitu
+SRC_25_Meitu = type=http-response,pattern=^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/,requires-body=1,script-path=https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/MeiTuXiuXiu.js
+SRC_26_Locket_Premium = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$),script-path=https://raw.githubusercontent.com/HuuTriet/ios-scripts-collection/main/Locket_Triet.js,requires-body=true,timeout=60
+SRC_27_Clean_Header = type=http-request,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers),script-path=https://raw.githubusercontent.com/HuuTriet/ios-scripts-collection/main/CleanHeader.js,timeout=60
+SRC_28_TTSan1208_Locket = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$),script-path=https://raw.githubusercontent.com/TTSan1208/scripts/main/locket.js,requires-body=true,max-size=-1,timeout=60
+SRC_29_Trung_Han_Locket = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.*\/(receipts$|subscribers\/[^/]+$),script-path=https://raw.githubusercontent.com/NightmarketServer/Locket/main/locketfix3.js,requires-body=true,max-size=-1,timeout=120
+SRC_30_Trung_Han_LocketHeader = type=http-request,pattern=^https:\/\/api\.revenuecat\.com\/.*\/(receipts|subscribers),script-path=https://raw.githubusercontent.com/NightmarketServer/Locket/main/header2.js,timeout=120
+SRC_31_dhungx_YouTube = type=http-response,pattern=^https://youtubei\.googleapis\.com/youtubei/v1/(browse|next|player|search|reel/reel_watch_sequence|guide|account/get_setting|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine=jsc,script-path=https://raw.githubusercontent.com/dhungx/modules-shadowrocket/refs/heads/main/js/Yt/youtube.response.preview.js
+SRC_32_KhunTam_SpotifyJSON = type=http-request,pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com)\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/KhunTam/Shadowrocket/refs/heads/main/spotify-json.js
+SRC_33_KhunTam_SpotifyProto = type=http-response,pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com)\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/KhunTam/Shadowrocket/refs/heads/main/spotify-proto.js,script-update-interval=0
+SRC_34_llygad_YouTubeRequest = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine=jsc,script-path=https://github.com/lonely0811/Surge/raw/main/js/youtube.request.preview.js
+SRC_35_llygad_YouTubeResponse = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine=jsc,script-path=https://github.com/lonely0811/Surge/raw/main/js/youtube.response.preview.js
+SRC_36_llygad_SoundCloud = type=http-response,pattern=https://api-mobile.soundcloud.com/configuration/ios,requires-body=1,script-path=https://raw.githubusercontent.com/veteneso/Shadowrocket-modules/refs/heads/main/Soundcloud.js
+SRC_37_llygad_Locket = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$),script-path=https://raw.githubusercontent.com/veteneso/Shadowrocket-modules/refs/heads/main/LocketCamera.js,requires-body=true,max-size=-1,timeout=60
+SRC_38_llygad_DeleteHeaders = type=http-request,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers),script-path=https://raw.githubusercontent.com/veteneso/Shadowrocket-modules/refs/heads/main/deleteheaders%2Cjs,timeout=60
+SRC_39_llygad_TrueCaller = type=http-response,pattern=^https://premium-(.+)\.truecaller\.com/v\d/(subscriptions|products\/apple),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/veteneso/Shadowrocket-modules/refs/heads/main/truecaller.js
 
 [MITM]
-hostname = %APPEND% spclient.wg.spotify.com, *spclient.spotify.com, api.revenuecat.com, www.youtube.com, s.youtube.com, *.googlevideo.com, youtubei.googleapis.com, premium*.truecaller.com, sub.store, api-mobile.soundcloud.com, api.picsart.com, us-central1-alight-creative.cloudfunctions.net, api-sub.meitu.com, photos.adobe.io, ap*.intsig.net, api-account.kinemasters.com, api.mr.pixocial.com, newbeee-api.beautyplus.com, user-snow-api.snow.me, h5.xiuxiu.meitu.com, api.xiuxiu.meitu.com
+hostname = %APPEND% spclient.wg.spotify.com, *spclient.spotify.com, api.revenuecat.com, www.youtube.com, s.youtube.com, *.googlevideo.com, youtubei.googleapis.com, premium*.truecaller.com, sub.store, api-mobile.soundcloud.com, api.picsart.com, us-central1-alight-creative.cloudfunctions.net, api-sub.meitu.com, photos.adobe.io, ap*.intsig.net, api-account.kinemasters.com, api.mr.pixocial.com, newbeee-api.beautyplus.com, user-snow-api.snow.me, h5.xiuxiu.meitu.com, api.xiuxiu.meitu.com, firebaseremoteconfig.googleapis.com, ep.spotify.com, redirector*.googlevideo.com, api.rc-backup.com, buy.itunes.apple.com
