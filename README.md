@@ -2,12 +2,12 @@
 
 ## ✅ Bản tổng hợp duy nhất — Ultimate v3.2 (Experimental)
 
-Cập nhật **URL Extended cũ**: [Infiniti-All-In-One-Extended.sgmodule](modules/Infiniti-All-In-One-Extended.sgmodule). Gồm `[Rule]` (5), `[Header Rewrite]` (2), `[Url Rewrite]` (5), `[Map Local]` (1), `[Script]` (7 script đang bật), và `[MITM]` (22 hostname/pattern). Cả **39 đường dẫn JS** được giữ không trùng nhau: **7 bật, 32 chỉ chú thích** (gồm 20 nguồn từng 404). Tắt các module All-in-One chồng chéo khi dùng bản này. **CA riêng tư và mật khẩu không được đăng lên GitHub**; giải mã HTTPS phải được cấp quyền và tin cậy cục bộ trên iPhone. [Hướng dẫn bản duy nhất](docs/ALL-IN-ONE-EXTENDED.md).
+Cập nhật **URL Extended cũ**: [Infiniti-All-In-One-Extended.sgmodule](modules/Infiniti-All-In-One-Extended.sgmodule). Gồm `[Rule]` (5), `[Header Rewrite]` (2), `[Url Rewrite]` (5), `[Map Local]` (1), `[Script]` (7 script đang bật), và `[MITM]` (21 hostname/pattern). Cả **39 đường dẫn JS** được giữ không trùng nhau: **7 bật, 32 chỉ chú thích** (gồm 20 nguồn từng 404). Tắt các module All-in-One chồng chéo khi dùng bản này. **CA riêng tư và mật khẩu không được đăng lên GitHub**; giải mã HTTPS phải được cấp quyền và tin cậy cục bộ trên iPhone. [Hướng dẫn bản duy nhất](docs/ALL-IN-ONE-EXTENDED.md).
 
 
 ## ⚠️ Extended v3.0 — một URL tích hợp thử nghiệm
 
-Theo yêu cầu hợp nhất, `modules/Infiniti-All-In-One-Extended.sgmodule` tại **URL cũ** hiện có 5 Rule, 8 URL Rewrite, 2 Header Rewrite, 1 Map Local, 22 khai báo Script và 22 hostname/pattern MITM; 39 URL nguồn vẫn được lập danh mục. **Đây là bản thử nghiệm, chưa thể bảo đảm chạy trơn tru**: một số script nguồn duyvinh09 đã từng trả 404, một số can thiệp RevenueCat và HTTPS nhạy cảm. [Đọc hướng dẫn cập nhật và kiểm thử](docs/ALL-IN-ONE-EXTENDED.md).
+Theo yêu cầu hợp nhất, `modules/Infiniti-All-In-One-Extended.sgmodule` tại **URL cũ** hiện có 5 Rule, 8 URL Rewrite, 2 Header Rewrite, 1 Map Local, 22 khai báo Script và 21 hostname/pattern MITM; 39 URL nguồn vẫn được lập danh mục. **Đây là bản thử nghiệm, chưa thể bảo đảm chạy trơn tru**: một số script nguồn duyvinh09 đã từng trả 404, một số can thiệp RevenueCat và HTTPS nhạy cảm. [Đọc hướng dẫn cập nhật và kiểm thử](docs/ALL-IN-ONE-EXTENDED.md).
 
 **Không thể đưa `ca-p12` hay `ca-passphrase` vào GitHub**: đó là khóa riêng CA + mật khẩu. CA cần được quản lý và tin cậy cục bộ trên iPhone, không qua module công khai. Để trở về bản không giải mã, chọn `modules/Infiniti-All-In-One.sgmodule`.
 
