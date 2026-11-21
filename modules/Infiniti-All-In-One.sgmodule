@@ -1,0 +1,17 @@
+#!name=Infiniti Shadowrocket All-in-One
+#!desc=AdBlock + Privacy for iOS, Safari, TikTok, games and general apps (no MITM)
+#!author=infiniti-money
+#!homepage=https://github.com/infiniti-money/Shadowrocket
+#!url=https://raw.githubusercontent.com/infiniti-money/Shadowrocket/main/modules/Infiniti-All-In-One.sgmodule
+
+# Official safe consolidated module, version 1.0
+# Import as a module into an existing Shadowrocket configuration; NOT a proxy config.
+# No premium/unlock; no HTTPS MITM, Javascript or rewrites.
+# YouTube / YouTube Music in-stream ads may remain.
+# Do not enable alongside AdBlock Lite or another overlapping all-in-one filter.
+
+[Rule]
+# General ads; stronger than AdvertisingLite, may cause more false positives.
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list,REJECT
+# Selected tracking domains: separate from general advertising.
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Privacy/Privacy.list,REJECT
