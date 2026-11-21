@@ -1,5 +1,12 @@
 # Shadowrocket Safe Kit 🇻🇳
 
+## ⚠️ Extended v3.0 — một URL tích hợp thử nghiệm
+
+Theo yêu cầu hợp nhất, `modules/Infiniti-All-In-One-Extended.sgmodule` tại **URL cũ** hiện có 5 Rule, 8 URL Rewrite, 2 Header Rewrite, 1 Map Local, 22 khai báo Script và 22 hostname/pattern MITM; 39 URL nguồn vẫn được lập danh mục. **Đây là bản thử nghiệm, chưa thể bảo đảm chạy trơn tru**: một số script nguồn duyvinh09 đã từng trả 404, một số can thiệp RevenueCat và HTTPS nhạy cảm. [Đọc hướng dẫn cập nhật và kiểm thử](docs/ALL-IN-ONE-EXTENDED.md).
+
+**Không thể đưa `ca-p12` hay `ca-passphrase` vào GitHub**: đó là khóa riêng CA + mật khẩu. CA cần được quản lý và tin cậy cục bộ trên iPhone, không qua module công khai. Để trở về bản không giải mã, chọn `modules/Infiniti-All-In-One.sgmodule`.
+
+
 ## 🧩 Tích hợp hai file .conf bạn đã tải lên (bản thử nghiệm đầy đủ)
 
 Đã lưu hai bản xuất cấu hình được **loại bỏ khóa chứng chỉ `ca-p12` và `ca-passphrase`** tại `sources/user-uploads/`. Đã tạo [Full-Source-Merge-Experimental.sgmodule](modules/opt-in/Full-Source-Merge-Experimental.sgmodule) gồm 24 khai báo script, 5 URL Rewrite, 2 Header Rewrite, Map Local và 28 hostname/pattern MITM.
