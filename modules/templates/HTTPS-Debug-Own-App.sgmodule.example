@@ -1,0 +1,13 @@
+#!name=Infiniti HTTPS Debug - Own App Template
+#!desc=INACTIVE example only, for an HTTPS endpoint that you own
+#!author=infiniti-money
+#!homepage=https://github.com/infiniti-money/Shadowrocket
+
+# EXAMPLE ONLY — not active; do not import unchanged.
+# Create a separate file and remove comment prefixes ONLY after verifying ownership.
+# Replace api.app-you-own.example with an actual domain you administer.
+# Never use a wildcard or shared payment/identity endpoints.
+# Never commit a test CA private key, captured requests, cookies or tokens.
+
+# [MITM]
+# hostname = %APPEND% api.app-you-own.example
