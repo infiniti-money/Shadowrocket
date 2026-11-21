@@ -1,0 +1,321 @@
+{
+  "updated": "2026-11-21",
+  "purpose": "User verification inventory of external script-path dependencies",
+  "note": "URLs are references only; not copies or automatic execution. Availability notes are not a fresh exhaustive check.",
+  "scripts": [
+    {
+      "url": "https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js",
+      "names": [
+        "Sub-Store Core"
+      ],
+      "source_files": [
+        "modules/experimental/10in1_Vip_ProMax.sgmodule",
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "release-asset-not-individually-verified",
+      "active_in_main": false
+    },
+    {
+      "url": "https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js",
+      "names": [
+        "Sub-Store Simple"
+      ],
+      "source_files": [
+        "modules/experimental/10in1_Vip_ProMax.sgmodule",
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "release-asset-not-individually-verified",
+      "active_in_main": false
+    },
+    {
+      "url": "https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js",
+      "names": [
+        "Sub-Store Sync"
+      ],
+      "source_files": [
+        "modules/experimental/10in1_Vip_ProMax.sgmodule",
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "release-asset-not-individually-verified",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/youtube.response.js",
+      "names": [
+        "youtube.request",
+        "youtube.response"
+      ],
+      "source_files": [
+        "modules/experimental/10in1_Vip_ProMax.sgmodule",
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "source-previously-404",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js",
+      "names": [
+        "spotify-json"
+      ],
+      "source_files": [
+        "modules/experimental/10in1_Vip_ProMax.sgmodule",
+        "modules/opt-in/All-Apps-Experimental.sgmodule"
+      ],
+      "availability": "previously-retrieved-or-unverified",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js",
+      "names": [
+        "spotify-proto"
+      ],
+      "source_files": [
+        "modules/experimental/10in1_Vip_ProMax.sgmodule",
+        "modules/opt-in/All-Apps-Experimental.sgmodule"
+      ],
+      "availability": "previously-retrieved-or-unverified",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/SoundCloudGoPlus.js",
+      "names": [
+        "SoundCloudGo+"
+      ],
+      "source_files": [
+        "modules/experimental/10in1_Vip_ProMax.sgmodule",
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "source-previously-404",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/AlightMotion.js",
+      "names": [
+        "AlightMotion"
+      ],
+      "source_files": [
+        "modules/experimental/10in1_Vip_ProMax.sgmodule",
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "source-previously-404",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/PicsArt.js",
+      "names": [
+        "PicsArt"
+      ],
+      "source_files": [
+        "modules/experimental/10in1_Vip_ProMax.sgmodule",
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "source-previously-404",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/WinkVipCrack.js",
+      "names": [
+        "Wink"
+      ],
+      "source_files": [
+        "modules/experimental/10in1_Vip_ProMax.sgmodule",
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "source-previously-404",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/TrueCaller.js",
+      "names": [
+        "Truecaller"
+      ],
+      "source_files": [
+        "modules/experimental/10in1_Vip_ProMax.sgmodule",
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "source-previously-404",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/Kinemaster.js",
+      "names": [
+        "Kinemaster"
+      ],
+      "source_files": [
+        "modules/experimental/10in1_Vip_ProMax.sgmodule",
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "source-previously-404",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/camScanner.js",
+      "names": [
+        "Camscanner"
+      ],
+      "source_files": [
+        "modules/experimental/10in1_Vip_ProMax.sgmodule",
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "source-previously-404",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/BeautyPlus.js",
+      "names": [
+        "BeautyPlus"
+      ],
+      "source_files": [
+        "modules/experimental/10in1_Vip_ProMax.sgmodule",
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "source-previously-404",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/Locket_DuyVinh09.js",
+      "names": [
+        "revenuecat"
+      ],
+      "source_files": [
+        "modules/experimental/10in1_Vip_ProMax.sgmodule",
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "source-previously-404",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/deleteHeader.js",
+      "names": [
+        "deleteHeader"
+      ],
+      "source_files": [
+        "modules/experimental/10in1_Vip_ProMax.sgmodule",
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "source-previously-404",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/spotify-json.js",
+      "names": [
+        "spotify-json"
+      ],
+      "source_files": [
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "source-previously-404",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/spotify-proto.js",
+      "names": [
+        "spotify-proto"
+      ],
+      "source_files": [
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "source-previously-404",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/VSCO.js",
+      "names": [
+        "VSCO"
+      ],
+      "source_files": [
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "source-previously-404",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/PicsArtStorages.js",
+      "names": [
+        "PicsArtStorages"
+      ],
+      "source_files": [
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "source-previously-404",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/lightroom.js",
+      "names": [
+        "Lightroom"
+      ],
+      "source_files": [
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "source-previously-404",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/revenuecat.js",
+      "names": [
+        "RevenueCatVip"
+      ],
+      "source_files": [
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "source-previously-404",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/iTunes.js",
+      "names": [
+        "iTunes"
+      ],
+      "source_files": [
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "source-previously-404",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/Snow.js",
+      "names": [
+        "Snow"
+      ],
+      "source_files": [
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "source-previously-404",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/js/MeiTuXiuXiu.js",
+      "names": [
+        "Meitu"
+      ],
+      "source_files": [
+        "modules/experimental/All_In_One_duyvinh09.sgmodule"
+      ],
+      "availability": "source-previously-404",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/HuuTriet/ios-scripts-collection/main/Locket_Triet.js",
+      "names": [
+        "Locket_Premium"
+      ],
+      "source_files": [
+        "modules/opt-in/All-Apps-Experimental.sgmodule"
+      ],
+      "availability": "previously-retrieved-or-unverified",
+      "active_in_main": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/HuuTriet/ios-scripts-collection/main/CleanHeader.js",
+      "names": [
+        "Clean_Header"
+      ],
+      "source_files": [
+        "modules/opt-in/All-Apps-Experimental.sgmodule"
+      ],
+      "availability": "previously-retrieved-or-unverified",
+      "active_in_main": false
+    }
+  ]
+}
