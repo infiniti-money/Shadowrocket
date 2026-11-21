@@ -1,0 +1,39 @@
+{
+  "version": "1.1.0",
+  "updated": "2026-11-21",
+  "policy": "allowlisted-domain-rules-only",
+  "rules": [
+    {
+      "id": "ads-full",
+      "module": "modules/Infiniti-All-In-One.sgmodule",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list",
+      "required": true
+    },
+    {
+      "id": "privacy",
+      "module": "modules/Infiniti-All-In-One.sgmodule",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Privacy/Privacy.list",
+      "required": true
+    },
+    {
+      "id": "ads-lite",
+      "module": "modules/AdBlock-Lite.sgmodule",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/AdvertisingLite/AdvertisingLite.list",
+      "required": true
+    },
+    {
+      "id": "vn-threats",
+      "module": "modules/optional/Vietnam-Threat-Protection.sgmodule",
+      "url": "https://raw.githubusercontent.com/bigdargon/hostsVN/master/extensions/threat/surge-rule.conf",
+      "required": false
+    }
+  ],
+  "disallowed": [
+    "[MITM]",
+    "[Script]",
+    "[Header Rewrite]",
+    "[Url Rewrite]",
+    "[Map Local]"
+  ],
+  "notes": "Remote source accessibility and syntax checks only; no device-level or security guarantee."
+}
