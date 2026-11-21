@@ -1,5 +1,14 @@
 # Shadowrocket Safe Kit 🇻🇳
 
+## 🧩 Tích hợp hai file .conf bạn đã tải lên (bản thử nghiệm đầy đủ)
+
+Đã lưu hai bản xuất cấu hình được **loại bỏ khóa chứng chỉ `ca-p12` và `ca-passphrase`** tại `sources/user-uploads/`. Đã tạo [Full-Source-Merge-Experimental.sgmodule](modules/opt-in/Full-Source-Merge-Experimental.sgmodule) gồm 24 khai báo script, 5 URL Rewrite, 2 Header Rewrite, Map Local và 28 hostname/pattern MITM.
+
+**Bản này rủi ro cao và chưa được kiểm thử trên iOS.** Một số script duyvinh09 trước đây trả về HTTP 404, nhiều quy tắc can thiệp thuê bao RevenueCat dùng chung. Không đồng thời bật với các bộ 10in1/All-in-One khác. **URL Extended cũ vẫn giữ nguyên**, không tự tải 24 script vào iPhone.
+
+[Đọc chi tiết quy tắc đã sửa, bảo mật CA và cách kiểm tra](docs/USER-CONFIG-MERGE.md). `scripts/validate_user_sources.py` kiểm tra cấu trúc và phát hiện khóa CA vô tình bị commit.
+
+
 ## ⚠️ Quan trọng: Extended đã cập nhật v2.1 (HTTPS Experimental)
 
 Theo yêu cầu, **URL cũ** `modules/Infiniti-All-In-One-Extended.sgmodule` hiện đã **bật 4 khai báo script và MITM/Rewrite**. Đây **không còn là bản Safe**. Nếu bạn đã cài Extended, cập nhật module sẽ thay đổi phạm vi HTTPS interception trên thiết bị sau khi HTTPS Decryption được cấp phép. Sao lưu trước khi cập nhật, và không bật các module thử nghiệm Spotify/Locket/YouTube trùng lặp.
