@@ -55,3 +55,10 @@ Bộ kiểm tra tĩnh **không chứng nhận module tương thích mọi phiên
 ## License
 
 [MIT](LICENSE) cho mã và tài liệu gốc của repository.
+
+## Module thử nghiệm bên thứ ba — không bật mặc định
+
+Đã lưu bản tham khảo của Gaucuto tại [modules/experimental/10in1_Vip_ProMax.sgmodule](modules/experimental/10in1_Vip_ProMax.sgmodule) với dòng `#!url` ghi rõ [nguồn gốc](https://raw.githubusercontent.com/Gaucuto/Gauapple/refs/heads/main/10in1_Vip_ProMax). Nội dung upstream được giữ nguyên bên dưới các dòng cảnh báo.
+
+**Quan trọng:** File này có MITM, Header Rewrite, JavaScript chỉnh sửa trạng thái thuê bao từ những nguồn bên ngoài và một số URL từng trả về 404. Đưa file vào GitHub không đồng nghĩa đã kiểm toán hoặc xác nhận tương thích. **Không được tự động nhập vào AdBlock Lite, không khuyến nghị bật trên iPhone chính.** Công cụ kiểm tra an toàn tại `scripts/validate.py` chỉ xác minh các module Lite, **không** phê duyệt module experimental.
+
