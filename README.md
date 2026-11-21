@@ -109,3 +109,8 @@ Các nguồn đã được rà soát và phân loại trong [UPSTREAM-SOURCE-MAT
 
 Các nguồn `ithtelab`, `GMOogway`, `poohyeban`, `hongkongkiwi` được nghiên cứu về kiến trúc, tính tương thích và chuyển đổi quy tắc, chưa đưa thành quy tắc bật mặc định. Không ghép trực tiếp định dạng `hosts` vào `RULE-SET`. Bộ kiểm tra tĩnh cũng không tương đương với thử nghiệm trên iPhone.
 
+## 📚 Bộ sưu tập script Premium iOS (nghiên cứu)
+
+Đã nghiên cứu và xác minh 7 URL RAW module liên quan Spotify, Locket và YouTube. Xem [PREMIUM-SCRIPT-CATALOG.md](research/PREMIUM-SCRIPT-CATALOG.md) và [premium-sources.json](research/premium-sources.json) để kiểm tra danh mục, nguồn tác giả, rủi ro MITM và những điểm cần kiểm toán. Những URL này có thể thay đổi theo thời gian.
+
+**Không tự kích hoạt bất kỳ script nào từ danh mục**: nhiều module can thiệp quyền thuê bao qua RevenueCat hoặc yêu cầu HTTPS MITM. Dự án chính Infiniti All-in-One tiếp tục chỉ chứa các quy tắc chặn quảng cáo và quyền riêng tư không cần giải mã HTTPS. Không tuyên bố rằng script Premium đã được khôi phục hoặc đang hoạt động.
