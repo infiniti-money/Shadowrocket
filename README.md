@@ -1,5 +1,16 @@
 # Shadowrocket Safe Kit 🇻🇳
 
+## All-in-One Extended v2.0 — tích hợp sâu 39 nguồn JS
+
+**[Infiniti-All-In-One-Extended.sgmodule](modules/Infiniti-All-In-One-Extended.sgmodule)** là bản cài đặt hợp nhất **Advertising + Privacy + hostsVN threat protection**, kèm danh mục **39 script URL** theo từng nhóm ứng dụng (YouTube, Spotify, Locket/RevenueCat, Sub-Store, ứng dụng khác).
+
+**RAW:** `https://raw.githubusercontent.com/infiniti-money/Shadowrocket/main/modules/Infiniti-All-In-One-Extended.sgmodule`
+
+**Phân biệt rõ:** 39 URL script được liệt kê dưới dạng comment để tra cứu, **không chạy**; bản Extended không có MITM. Nếu muốn thử các script trước đây đã thêm, chúng vẫn ở `modules/opt-in/` riêng, chưa kiểm toán/không bảo đảm Premium hoạt động. **Chỉ bật một trong hai bản All-in-One thông thường và Extended** để tránh chồng bộ lọc.
+
+Đã thêm [bộ kiểm tra toàn bộ 39 URL](scripts/validate_extended.py) và [hướng dẫn](docs/ALL-IN-ONE-EXTENDED.md). Đừng coi việc liệt kê đủ source là đã kích hoạt mọi tính năng Premium.
+
+
 ## 🚀 Nâng cấp v1.1 — giám sát nguồn tự động
 
 - [Hướng dẫn nâng cấp](docs/UPGRADE-1.1.md): quy trình cài đặt, kiểm tra và khắc phục lỗi.
