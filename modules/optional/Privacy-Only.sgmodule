@@ -1,0 +1,8 @@
+#!name=Infiniti Privacy Only
+#!desc=Optional minimal privacy domain rules from blackmatrix7; no MITM
+#!author=infiniti-money
+#!homepage=https://github.com/infiniti-money/Shadowrocket
+
+# Select this OR the main All-in-One if you only want a small privacy list.
+[Rule]
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Privacy/Privacy.list,REJECT
