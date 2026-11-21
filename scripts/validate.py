@@ -7,6 +7,8 @@ ROOT = Path(__file__).resolve().parents[1]
 RULE = "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/AdvertisingLite/AdvertisingLite.list,REJECT"
 SAFE_MODULES = [
     "modules/Infiniti-All-In-One.sgmodule",
+    "modules/optional/Vietnam-Threat-Protection.sgmodule",
+    "modules/optional/Privacy-Only.sgmodule",
     "modules/AdBlock-Lite.sgmodule",
     "modules/AdBlock-Lite.module",
     "modules/reviewed/Gaucuto_10in1_Safe.sgmodule",
@@ -16,6 +18,14 @@ ORIGINAL_MODULES = [
     "modules/experimental/10in1_Vip_ProMax.sgmodule",
     "modules/experimental/All_In_One_duyvinh09.sgmodule",
 ]
+OPTIONAL_RULES = {
+    "modules/optional/Vietnam-Threat-Protection.sgmodule": [
+        "RULE-SET,https://raw.githubusercontent.com/bigdargon/hostsVN/master/extensions/threat/surge-rule.conf,REJECT",
+    ],
+    "modules/optional/Privacy-Only.sgmodule": [
+        "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Privacy/Privacy.list,REJECT",
+    ],
+}
 FULL_RULES = [
     "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list,REJECT",
     "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Privacy/Privacy.list,REJECT",
@@ -37,7 +47,7 @@ for name in SAFE_MODULES:
     if "[Rule]" not in active:
         failures.append(f"{name}: missing [Rule]")
     rules = [line for line in active if not line.startswith("[")]
-    expected = FULL_RULES if name.endswith("/Infiniti-All-In-One.sgmodule") else [RULE]
+    expected = OPTIONAL_RULES.get(name, FULL_RULES if name.endswith("/Infiniti-All-In-One.sgmodule") else [RULE])
     if rules != expected:
         failures.append(f"{name}: unexpected active rules: {rules}")
 
