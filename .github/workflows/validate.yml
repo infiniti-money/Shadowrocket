@@ -16,3 +16,10 @@ jobs:
         run: |
           curl --fail --location --retry 2 --max-time 20 --silent --show-error --output /dev/null \
             'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/AdvertisingLite/AdvertisingLite.list'
+      - name: Check full-module upstream lists
+        run: |
+          for url in \
+            'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list' \
+            'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Privacy/Privacy.list'; do
+            curl --fail --location --retry 2 --max-time 20 --silent --show-error --output /dev/null "$url"
+          done
