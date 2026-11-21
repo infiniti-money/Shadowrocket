@@ -3,27 +3,22 @@ on:
   push:
   pull_request:
   workflow_dispatch:
+  schedule:
+    - cron: '17 2 * * *'
 permissions:
   contents: read
+concurrency:
+  group: shadowrocket-validate-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
-      - name: Validate safe modules
+      - name: Verify safe modules and report experimental warnings
         run: python3 scripts/validate.py
-      - name: Check upstream rule availability
-        run: |
-          curl --fail --location --retry 2 --max-time 20 --silent --show-error --output /dev/null \
-            'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/AdvertisingLite/AdvertisingLite.list'
-      - name: Check full-module upstream lists
-        run: |
-          for url in \
-            'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list' \
-            'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Privacy/Privacy.list'; do
-            curl --fail --location --retry 2 --max-time 20 --silent --show-error --output /dev/null "$url"
-          done
-      - name: Check hostsVN threat extension availability
-        run: |
-          curl --fail --location --retry 2 --max-time 20 --silent --show-error --output /dev/null \
-            'https://raw.githubusercontent.com/bigdargon/hostsVN/master/extensions/threat/surge-rule.conf'
+      - name: Check allowlisted upstream references
+        run: python3 scripts/check_upstreams.py --offline
+      - name: Check upstream rule availability and syntax
+        run: python3 scripts/check_upstreams.py
