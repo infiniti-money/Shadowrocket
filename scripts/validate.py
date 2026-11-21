@@ -6,6 +6,7 @@ import re
 ROOT = Path(__file__).resolve().parents[1]
 RULE = "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/AdvertisingLite/AdvertisingLite.list,REJECT"
 SAFE_MODULES = [
+    "modules/Infiniti-All-In-One.sgmodule",
     "modules/AdBlock-Lite.sgmodule",
     "modules/AdBlock-Lite.module",
     "modules/reviewed/Gaucuto_10in1_Safe.sgmodule",
@@ -14,6 +15,10 @@ SAFE_MODULES = [
 ORIGINAL_MODULES = [
     "modules/experimental/10in1_Vip_ProMax.sgmodule",
     "modules/experimental/All_In_One_duyvinh09.sgmodule",
+]
+FULL_RULES = [
+    "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising.list,REJECT",
+    "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Privacy/Privacy.list,REJECT",
 ]
 FORBIDDEN_SECTIONS = {"[mitm]", "[script]", "[header rewrite]", "[url rewrite]", "[map local]"}
 failures = []
@@ -32,7 +37,8 @@ for name in SAFE_MODULES:
     if "[Rule]" not in active:
         failures.append(f"{name}: missing [Rule]")
     rules = [line for line in active if not line.startswith("[")]
-    if rules != [RULE]:
+    expected = FULL_RULES if name.endswith("/Infiniti-All-In-One.sgmodule") else [RULE]
+    if rules != expected:
         failures.append(f"{name}: unexpected active rules: {rules}")
 
 print("=== Experimental originals (audit only; NOT approved for installation) ===")
@@ -65,4 +71,4 @@ for name in ORIGINAL_MODULES:
 
 if failures:
     raise SystemExit("FAILED:\n" + "\n".join(failures))
-print("PASS: safe/reviewed modules are domain-only; experimental originals reported, not validated as safe")
+print("PASS: safe/reviewed/all-in-one modules are domain-only; experimental originals reported, not validated as safe")
