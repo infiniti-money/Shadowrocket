@@ -1,0 +1,14 @@
+#!name=Gaucuto 10in1 - Reviewed Safe
+#!desc=Safe ad-domain filtering only; premium and MITM scripts removed
+#!author=infiniti-money (review); originally Gaucuto
+#!url=https://raw.githubusercontent.com/Gaucuto/Gauapple/refs/heads/main/10in1_Vip_ProMax
+
+# Review: 2026-11-21
+# This is NOT a working Premium/10in1 unlock replacement.
+# Disabled UDP YouTube blocks: may affect QUIC connectivity.
+# Disabled all header/url rewrites and scripts requiring HTTPS decryption.
+# Disabled broken external links from duyvinh09/Module_IOS (GitHub returned 404).
+# No MITM; YouTube inline ads cannot reliably be blocked by domains alone.
+
+[Rule]
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/AdvertisingLite/AdvertisingLite.list,REJECT
