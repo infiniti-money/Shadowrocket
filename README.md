@@ -62,3 +62,11 @@ Bộ kiểm tra tĩnh **không chứng nhận module tương thích mọi phiên
 
 **Quan trọng:** File này có MITM, Header Rewrite, JavaScript chỉnh sửa trạng thái thuê bao từ những nguồn bên ngoài và một số URL từng trả về 404. Đưa file vào GitHub không đồng nghĩa đã kiểm toán hoặc xác nhận tương thích. **Không được tự động nhập vào AdBlock Lite, không khuyến nghị bật trên iPhone chính.** Công cụ kiểm tra an toàn tại `scripts/validate.py` chỉ xác minh các module Lite, **không** phê duyệt module experimental.
 
+
+### Lưu trữ bản All In One của duyvinh09
+
+- [All_In_One_duyvinh09.sgmodule](modules/experimental/All_In_One_duyvinh09.sgmodule) — bản **người dùng cung cấp**, lưu nguyên cấu hình để kiểm tra và nghiên cứu, không thuộc AdBlock Lite.
+- [Nguồn tác giả đã ghi trong file](https://raw.githubusercontent.com/duyvinh09/Module_IOS/refs/heads/main/All_In_One.sgmodule) — trả về **HTTP 404** khi kiểm tra ngày 21/11/2026; không xác minh được nội dung gốc trực tuyến.
+- Cấu hình chứa 25 dòng tham chiếu `script-path`, MITM phạm vi rộng, can thiệp thông tin thuê bao và những dấu hiệu cú pháp cần kiểm tra như `engine={{{script}}}`, dòng VSCO thiếu dấu phân cách và dấu phẩy rỗng trong danh sách hostname. Không nhập vào iPhone chính.
+- GitHub Actions hiện chỉ xác minh các module AdBlock Lite, **không** kiểm thử bản All In One này.
+
