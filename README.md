@@ -70,3 +70,15 @@ Bộ kiểm tra tĩnh **không chứng nhận module tương thích mọi phiên
 - Cấu hình chứa 25 dòng tham chiếu `script-path`, MITM phạm vi rộng, can thiệp thông tin thuê bao và những dấu hiệu cú pháp cần kiểm tra như `engine={{{script}}}`, dòng VSCO thiếu dấu phân cách và dấu phẩy rỗng trong danh sách hostname. Không nhập vào iPhone chính.
 - GitHub Actions hiện chỉ xác minh các module AdBlock Lite, **không** kiểm thử bản All In One này.
 
+
+## Bản sửa sau khi nghiên cứu (21/11/2026)
+
+**Không sử dụng các file trong `experimental/` trực tiếp trên iPhone chính.** Đã có hai phiên bản kiểm tra an toàn, tách biệt:
+
+- [Gaucuto_10in1_Safe.sgmodule](modules/reviewed/Gaucuto_10in1_Safe.sgmodule): phiên bản lọc quảng cáo domain, bỏ MITM, sửa phản hồi thuê bao và script JavaScript không xác minh.
+- [DuyVinh_All_In_One_Safe.sgmodule](modules/reviewed/DuyVinh_All_In_One_Safe.sgmodule): phiên bản lọc quảng cáo domain, không phụ thuộc các script 404 hoặc bản khai báo cú pháp bất thường.
+- [MODULE-REPAIR-REPORT.md](research/MODULE-REPAIR-REPORT.md): bảng lỗi, giải thích những phần vô hiệu hóa và cách kiểm tra.
+
+**Lưu ý:** Hai bản reviewed cố ý chỉ chặn domain theo AdvertisingLite, nên không khôi phục tính năng Pro/Premium, không bảo đảm bỏ quảng cáo trong ứng dụng YouTube. Hai file reviewed là hai biến thể độc lập; **chỉ bật một**, không cần bật cùng lúc hoặc chồng với AdBlock Lite.
+
+**Tự kiểm tra:** `python3 scripts/validate.py` và [GitHub Actions](https://github.com/infiniti-money/Shadowrocket/actions). Bộ kiểm tra không chứng nhận tương thích thực tế trên iPhone.
