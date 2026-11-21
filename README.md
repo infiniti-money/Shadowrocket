@@ -1,5 +1,17 @@
 # Shadowrocket Safe Kit 🇻🇳
 
+## 🌟 Bản đầy đủ chính chủ — Infiniti All-in-One
+
+**Khuyên dùng nếu muốn một file tổng hợp**: [Infiniti-All-In-One.sgmodule](modules/Infiniti-All-In-One.sgmodule)
+
+RAW:
+`https://raw.githubusercontent.com/infiniti-money/Shadowrocket/main/modules/Infiniti-All-In-One.sgmodule`
+
+Gồm **Advertising (full) + Privacy**, kiểm tra nguồn bằng GitHub Actions, không yêu cầu MITM. Áp dụng lọc tên miền cho Safari, game, TikTok và ứng dụng khác, có giới hạn đối với quảng cáo video YouTube / YouTube Music. **Không chứa Premium Unlock hoặc sửa trạng thái thuê bao.**
+
+[Hướng dẫn sử dụng và giới hạn](docs/ALL-IN-ONE.md). **Chỉ bật một trong** Infiniti All-in-One, AdBlock Lite hoặc các bản reviewed, tránh quy tắc trùng. Các bản Premium 10in1 gốc vẫn được lưu ở `modules/experimental/` nhưng chưa kiểm toán và không tự bật.
+
+
 [![Validate Shadowrocket modules](https://github.com/infiniti-money/Shadowrocket/actions/workflows/validate.yml/badge.svg)](https://github.com/infiniti-money/Shadowrocket/actions/workflows/validate.yml)
 
 Bộ cấu hình Shadowrocket do **infiniti-money** quản lý, ưu tiên **chặn quảng cáo theo domain mà không cần HTTPS MITM**. Bộ mã này có tài liệu về YouTube, YouTube Music, TikTok, Safari, game iOS và đánh giá rủi ro của các module Premium.
