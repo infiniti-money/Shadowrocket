@@ -33,7 +33,7 @@ assert previously_404.issubset(commented), "Missing broken URL archive entry"
 mitm=section("MITM")[0]
 assert mitm.startswith("hostname = %APPEND% ") and mitm.count("%APPEND%")==1
 hosts = [v.strip() for v in mitm.split("=",1)[1].replace("%APPEND%","",1).split(",")]
-assert len(hosts)==22 and len(hosts)==len(set(hosts))
+assert len(hosts)==21 and len(hosts)==len(set(hosts))
 print("PASS: Ultimate v3.2: 5 rules, 5 URL rewrites, 2 header rewrites, 1 map local")
-print("PASS: 39 unique JS URLs (7 active and 32 commented), 22 MITM host patterns")
+print("PASS: 39 unique JS URLs (7 active and 32 commented), 21 MITM host patterns")
 print("WARNING: network availability, script behavior and TLS trust NOT verified")
