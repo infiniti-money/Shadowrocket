@@ -123,3 +123,9 @@ Các nguồn `ithtelab`, `GMOogway`, `poohyeban`, `hongkongkiwi` được nghiê
 Đã nghiên cứu và xác minh 7 URL RAW module liên quan Spotify, Locket và YouTube. Xem [PREMIUM-SCRIPT-CATALOG.md](research/PREMIUM-SCRIPT-CATALOG.md) và [premium-sources.json](research/premium-sources.json) để kiểm tra danh mục, nguồn tác giả, rủi ro MITM và những điểm cần kiểm toán. Những URL này có thể thay đổi theo thời gian.
 
 **Không tự kích hoạt bất kỳ script nào từ danh mục**: nhiều module can thiệp quyền thuê bao qua RevenueCat hoặc yêu cầu HTTPS MITM. Dự án chính Infiniti All-in-One tiếp tục chỉ chứa các quy tắc chặn quảng cáo và quyền riêng tư không cần giải mã HTTPS. Không tuyên bố rằng script Premium đã được khôi phục hoặc đang hoạt động.
+
+## ⚠️ Module thử nghiệm bật riêng (opt-in)
+
+Các bản thử nghiệm mới có file riêng trong [modules/opt-in](modules/opt-in), gồm **Spotify** (2 script từ app2smile), **Locket** (2 script liên quan RevenueCat từ HuuTriet) và **YouTube** (URL Rewrite giới hạn, không nhúng script Premium chưa kiểm toán). Xem [hướng dẫn, rủi ro và cách thử](docs/OPT-IN-MODULES.md).
+
+**Mặc định KHÔNG bật** trong Infiniti All-in-One, vì cần HTTPS MITM, có thể xung đột với ứng dụng hoặc can thiệp xác thực thuê bao. Chỉ lưu file trên GitHub không kích hoạt module trên iPhone. Các chức năng trả phí không được xác nhận là đã khôi phục hoặc có thuê bao hợp lệ. GitHub Actions mặc định chỉ chứng nhận bộ lọc domain an toàn, **không kiểm toán script opt-in**.
