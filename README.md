@@ -1,5 +1,14 @@
 # Shadowrocket Safe Kit 🇻🇳
 
+## 🚀 Nâng cấp v1.1 — giám sát nguồn tự động
+
+- [Hướng dẫn nâng cấp](docs/UPGRADE-1.1.md): quy trình cài đặt, kiểm tra và khắc phục lỗi.
+- [Danh mục upstream](rules/upstreams.json): quản lý nguồn rule chính thức, tránh URL ngoài dự kiến.
+- [Trình kiểm tra upstream](scripts/check_upstreams.py): kiểm tra trạng thái tải, UTF-8 và cú pháp các dòng quy tắc.
+- [GitHub Actions](.github/workflows/validate.yml): kiểm tra khi push/PR và mỗi ngày lúc 09:17 giờ Việt Nam.
+- **URL cài đặt All-in-One không thay đổi.** Các module Premium còn ở chế độ nghiên cứu, không có quyền MITM trong module chính.
+
+
 ## 🌟 Bản đầy đủ chính chủ — Infiniti All-in-One
 
 **Khuyên dùng nếu muốn một file tổng hợp**: [Infiniti-All-In-One.sgmodule](modules/Infiniti-All-In-One.sgmodule)
